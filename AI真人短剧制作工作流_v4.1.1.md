@@ -1,6 +1,6 @@
 # AI 真人短剧制作工作流
 
-## v4.1 全整合修订版
+## v4.1.1 全整合修订版（语言分层铁律强化）
 
 **Seedance 2.0 执行版 | 9:16 竖屏 | 写实真人风格 | 七段式内部校验 + 时间段式投喂包体系**
 
@@ -11,7 +11,8 @@
 | 版本 | 核心变更 |
 |------|----------|
 | v4.0 | 全面整合修订：@图片引用位置统一·删除音频模式判断·单集时长150–180秒·竖屏锚点控制提前·情绪推导卡加场景编号索引·时钟方位朝向系统·物理冲突专项库·冗余内容清理 |
-| **v4.1（当前）** | ① generate_audio on + no BGM（保留环境音与口型同步）② @角色全名引用体系替代旧@图片N ③ 运镜库扩展至A–G七类45+种 ④ 新增Seedance 2.0参数锁定表 ⑤ 新增独立Negative Prompt字段 ⑥ 新增首尾帧字符级锁定协议 ⑦ 新增同场景光线字符级一致铁律 ⑧ 新增服化道状态分级规则（Level 0/1/2）⑨ 补充钩子公式D/E ⑩ 色调风格板模板补全 ⑪ 防油腻四件套更新 ⑫ 四幕时长改区间制 ⑬ 投喂版朝向改英文方向语言 ⑭ 竖屏三区投喂版保留英文标注 ⑮ 物理冲突专项库完整版 ⑯ 冗余章节合并精简 |
+| v4.1 | ① generate_audio on + no BGM（保留环境音与口型同步）② @角色全名引用体系替代旧@图片N ③ 运镜库扩展至A–G七类45+种 ④ 新增Seedance 2.0参数锁定表 ⑤ 新增独立Negative Prompt字段 ⑥ 新增首尾帧字符级锁定协议 ⑦ 新增同场景光线字符级一致铁律 ⑧ 新增服化道状态分级规则（Level 0/1/2）⑨ 补充钩子公式D/E ⑩ 色调风格板模板补全 ⑪ 防油腻四件套更新 ⑫ 四幕时长改区间制 ⑬ 投喂版朝向改英文方向语言 ⑭ 竖屏三区投喂版保留英文标注 ⑮ 物理冲突专项库完整版 ⑯ 冗余章节合并精简 |
+| **v4.1.1（当前）** | ★★★ 语言分层铁律强化：① 新增第11.6节「语言分层铁律」作为核心补丁 ② 台词/角色名/表演动作/表情/呼吸/嘴型/肢体/面部特征/服化道状态/环境音/切景标志/道具名/场景名/配角反应/情绪余韵 → **一律中文描述** ③ 镜头语言/运镜/景别/机位/画面分区/朝向/光线描述/全局约束/Negative Prompt → 英文关键词 ④ 重写11.3-11.5示例按新语言分层 ⑤ 11.4第六节段尾锁定改中英混合格式 ⑥ 一票否决表新增21-25条语言铁律 ⑦ 自检清单新增8项语言检查 |
 
 ---
 
@@ -685,10 +686,11 @@ lens flare artifact, chromatic aberration
 
 ### 11.3 全局约束（第二节·直接投喂版关键词格式）
 
-★ 直接投喂版全局约束统一写成英文关键词组格式。防油腻四件套缺一不可。
+★ 直接投喂版的「全局约束」固定使用英文关键词组（画质/画幅/音频/一致性这类工程参数经实测英文识别更稳定）。
+★ 但投喂版其他内容（场景/人物/表演/台词/环境音/道具/切景）**一律使用中文描述**，详见 11.6 语言分层铁律。
 
-| 类别 | 直接投喂版写法 | 覆盖内容 |
-|------|---------------|----------|
+| 类别 | 直接投喂版写法（英文固定） | 覆盖内容 |
+|------|---------------------------|----------|
 | 画质+皮肤（含防油腻四件套） | `photorealistic, cinematic quality, soft cinematic look, fine film-like tonal rolloff, realistic acting, rich facial micro-expressions, natural skin texture, matte skin finish, preserve facial pore detail, no forehead-nose specular hotspot` | 画质基准 + ★防油腻四件套（后四项缺一不可） |
 | 画幅+音频 | `9:16 vertical frame, generate_audio on, accurate lip sync to dialogue, ambient sound design, no background music` | 画幅固定·音频开启·口型同步·环境音·禁BGM |
 | 正向约束 | `consistent character identity across shots, natural acting rhythm with micro-pauses` | 角色一致性+表演自然度 |
@@ -723,49 +725,75 @@ lens flare artifact, chromatic aberration
 
 #### 第三节：参考场景 + 参考人物
 
+★ 场景名/道具名/环境音描述一律**中文**。光线描述字段使用英文关键词（见第十章10.1光线情绪编码，经测试英文识别更稳定），其他全部中文。
+
 | 字段 | 直接投喂版写法 | 内部存档版额外保留 |
 |------|---------------|-------------------|
-| 参考场景 | 场景名称 + 核心空间特征 + 光线基调（英文固定字符串）+ 环境音底床 | SCENE编号·基准图说明·场景建立逻辑分析 |
-| 参考人物 | 本段所有出场角色完整姓名 | 无需额外 |
-| 画外声源（如有） | 声源方向 + 类型 + 强弱 | 无需额外 |
+| 参考场景 | 中文场景名称 + 中文核心空间特征 + 中文环境音底床 + 英文光线基调关键词（字符级复制同场景固定串） | SCENE编号·基准图说明·场景建立逻辑分析 |
+| 参考人物 | 本段所有出场角色完整中文姓名（@姓名） | 无需额外 |
+| 画外声源（如有） | 中文描述：声源方向 + 类型 + 强弱 | 无需额外 |
+
+**示例**：
+```
+场景：陆家别墅客厅·豪门压抑感，环境音：钟摆声稳定底床，远处雨声从窗外隐约传入
+光线（英文关键词）：warm-gold-tinted dim interior light, single desk lamp as key from screen-right, soft amber fill
+画外声源：画面左侧远处传来沉闷关门声，中强度
+```
 
 #### 第四节：开始人物位置关系
 
-★ 直接投喂版每个角色所有信息合并为一行连续英文描述。
+★ 直接投喂版每个角色一行连续描述。面部特征词/服化道状态/姿态/视线/手部动作一律**中文**。镜头语言关键词（朝向/画面分区/景深位置）使用英文（upper/middle/lower zone, foreground/midground/background, facing camera 等）。
 
 **必填格式（每个角色一行）**：
 
 ```
-@角色全名 [面部特征词], [服化道Level+差异描述（Level 0省略）], 
-[英文朝向] [站坐跪] at [画面区域] [景深位置]; 
-[视线/姿态/手部状态]
+@角色全名 中文面部特征词，[服化道Level+中文差异描述（Level 0省略）]，
+[英文朝向关键词] [站/坐/跪] at [英文画面区域] [英文景深位置]；
+中文视线/姿态/手部状态描述
 ```
 
 **示例**：
 
 ```
-@陆知意 almond eyes, petite nose bridge, pale lips, 
-three-quarter facing left toward camera, standing at middle zone right side near bed edge, midground; 
-anxious gaze toward 骁离, fingers clutching nightgown hem
+@陆知意 杏眼·小巧鼻梁·浅色唇，
+three-quarter facing left toward camera, standing at middle zone right side near desk, midground；
+视线焦灼看向陆震东，手指紧攥合同边缘指节发白
+
+@陆震东 宽额·严厉眉骨·薄抿唇，
+facing screen-left in profile, seated at lower-middle zone center behind desk, midground；
+身体向后靠于椅背，双臂交叉环胸，冷眼下垂注视合同
 ```
 
-**光线条件**（合并写入场景行或单独一行）：
+**光线条件**（英文关键词，合并写入场景行或单独一行）：
 
 ```
-Lighting: cool blue rain-night window light as key from screen-left, no room lamp, low ambient fill
+Lighting: warm-gold-tinted dim interior light, single desk lamp as key from screen-right, soft amber fill, deep shadow on left wall
 ```
 
-**关键道具**：
+**关键道具**（中文描述）：
 
 ```
-Props: pale thin blanket draped across lower zone foreground, slightly out of focus
+道具：奶白色合同文件握于陆知意手中，位于画面中区；台灯位于画面右侧下区前景
 ```
 
 #### 第五节：时间段式连续提示词
 
+★ 本节为投喂包最核心部分。语言分层严格执行 11.6 铁律：
+- **镜头语言（景别/机位/运镜）** → 英文关键词（参照第八章运镜扩展库）
+- **画面分区/朝向** → 英文关键词（upper/middle/lower zone, screen-left/right, facing camera 等）
+- **光线描述** → 英文关键词（字符级复制场景光线固定串）
+- **表演动作/表情/呼吸/嘴型/肢体** → **中文描述**
+- **面部特征补充** → **中文**
+- **服化道状态补充** → **中文**
+- **环境音描述** → **中文**
+- **台词** → **中文原文**（剧本原句，100%保留）
+- **切景标志** → **中文**（【切景：___】）
+- **道具名** → **中文**
+- **角色名** → **中文**（@姓名）
+
 **★ 上游推导落实铁律**：每个时间拍点必须将以下上游推导内容强制写入：
-1. 情绪推导卡配角反应规格（不说话角色具体微表情+肢体）
-2. 情绪推导卡从情绪细节规格（从情绪表情细节+音效细节）
+1. 情绪推导卡配角反应规格（不说话角色具体微表情+肢体，中文描述）
+2. 情绪推导卡从情绪细节规格（从情绪表情细节+音效细节，中文描述）
 3. STEP 3-B台词时间预算秒数（对应拍点时间段）
 4. STEP 1-A标注的30秒爽点位置（对应SEG标注爽点触发）
 
@@ -781,38 +809,42 @@ Props: pale thin blanket draped across lower zone foreground, slightly out of fo
 
 **每个内部时间拍点必须落实七项**：
 
-| 必落实项 | 说明 | 上游来源 |
-|----------|------|----------|
-| ① 镜头状态 | 当前景别·机位·焦段感·运镜方式（使用第八章英文关键词） | STEP 3-B镜头类型判断 + 运镜扩展库 |
-| ② 光影状态 | 当前光线类型·色温·软/硬光声明·情绪光影服务方向（字符级复制场景光线固定串） | 情绪推导卡色调光影字段 + 同场景光线一致铁律 |
-| ③ 人物动作表情 | 表演四拍完整写出：触发→停顿（0.3–1秒）→外化→余韵留白。禁止极端速度词 | 情绪推导卡动作/表演规格字段 |
-| ④ 台词/无台词 | 完整台词原文 + 说话时下颌/呼吸/嘴型描写；或明确标注无台词。时间段必须覆盖台词预算 | STEP 3-B台词时间预算 |
-| ⑤ 配角反应（★上游落实） | 不说话角色的视线落点·具体微表情·肢体响应·潜台词肢体泄露 | 情绪推导卡配角反应字段 |
-| ⑥ 从情绪细节（★上游落实） | 从情绪角色的表情细节与音效细节 | 情绪推导卡从情绪表情+音效细节字段 |
-| ⑦ 环境音+切景 | 当前环境声底床·特殊音效·声音强弱变化 + 切景标志 | 情绪推导卡音效规格字段 |
+| 必落实项 | 说明 | 语言 | 上游来源 |
+|----------|------|------|----------|
+| ① 镜头状态 | 当前景别·机位·焦段感·运镜方式 | **英文关键词** | STEP 3-B镜头类型判断 + 运镜扩展库 |
+| ② 光影状态 | 当前光线类型·色温·软/硬光声明·情绪光影服务方向（字符级复制场景光线固定串） | **英文关键词** | 情绪推导卡色调光影字段 + 同场景光线一致铁律 |
+| ③ 人物动作表情 | 表演四拍完整写出：触发→停顿（0.3–1秒）→外化→余韵留白。禁止极端速度词 | **中文描述** | 情绪推导卡动作/表演规格字段 |
+| ④ 台词/无台词 | 完整中文台词原文 + 中文说话时下颌/呼吸/嘴型描写；或明确标注无台词。时间段必须覆盖台词预算 | **中文** | STEP 3-B台词时间预算 |
+| ⑤ 配角反应（★上游落实） | 不说话角色的视线落点·具体微表情·肢体响应·潜台词肢体泄露 | **中文描述** | 情绪推导卡配角反应字段 |
+| ⑥ 从情绪细节（★上游落实） | 从情绪角色的表情细节与音效细节 | **中文描述** | 情绪推导卡从情绪表情+音效细节字段 |
+| ⑦ 环境音+切景 | 当前环境声底床·特殊音效·声音强弱变化 + 切景标志 | **中文描述** | 情绪推导卡音效规格字段 |
 
-**切景标志写法（直接投喂版用英文）**：
-- 切景时：`[CUT TO: medium close-up of 角色全名]`
-- 不切景时：`[CONTINUOUS: maintaining current framing]`
+**切景标志写法（直接投喂版用中文）**：
+- 切景时：`【切景：___近景/中近景/关系景/道具特写】`（示例：`【切景：过肩镜头，从陆知意背后拍向陆震东面部】`）
+- 不切景时：`【保持当前景别继续】`
 
-**30秒爽点落实铁律**：STEP 1-A标注的每个30秒爽点，必须在对应时间位置的SEG内，在时间拍点描述中明确写出「★30-SECOND PAYOFF TRIGGER」并落实情绪推导卡高强度规格。
+**30秒爽点落实铁律**：STEP 1-A标注的每个30秒爽点，必须在对应时间位置的SEG内，在时间拍点描述中明确用中文写出「★本拍为30秒爽点触发：___（中文描述触发内容）」并落实情绪推导卡高强度规格。
 
 #### 第六节：段尾锁定（仅内部存档版）
 
+★ 段尾锁定除朝向和画面区域用英文关键词外，其他全部中文描述。
+
 ```
 【SEG-__ 段尾锁定】
-人物位置与朝向：@角色全名, [英文方向], [画面区域], [景深位置]
-姿态与手部：[具体姿态], [手部状态含道具]
-面部表情：[精确表情状态，含眉/眼/嘴/下颌]
-服化道当前状态：[Level编号 + 差异描述（如有）]
-光线落点：[光源方向], [脸部受光比例], [阴影位置]
-环境声底床：[当前持续的环境音]
-情绪余韵：[当前情绪停留状态]
+人物位置与朝向：@角色全名, [英文朝向关键词], [英文画面区域], [英文景深位置]
+姿态与手部：[中文具体姿态], [中文手部状态含道具]
+面部表情：[中文精确表情状态，含眉/眼/嘴/下颌]
+服化道当前状态：[Level编号 + 中文差异描述（如有）]
+光线落点：[英文光源方向], [中文脸部受光比例], [中文阴影位置]
+环境声底床：[中文当前持续的环境音]
+情绪余韵：[中文当前情绪停留状态]
 ```
 
 **段尾锁定 → 下一SEG承接铁律**：SEG-B 开始人物位置关系必须逐字复制 SEG-A 段尾锁定内容，一字不改（详见第七章7.6节）。
 
-### 11.5 直接投喂版最终结构示意
+### 11.5 直接投喂版最终结构示意（v4.1.1 语言分层修订）
+
+★ 以下是可直接复制进Seedance 2.0的完整格式。严格遵循11.6语言分层铁律：工程参数/镜头语言/画面分区/光线描述用英文，其他全部中文。
 
 ```
 photorealistic, cinematic quality, soft cinematic look, fine film-like tonal rolloff, 
@@ -822,50 +854,132 @@ preserve facial pore detail, no forehead-nose specular hotspot,
 ambient sound design, no background music, 
 consistent character identity across shots, natural acting rhythm with micro-pauses
 
-Lu family villa living room, oppressive luxury atmosphere, 
-warm-gold-tinted dim interior light, pendulum clock ticking ambient
+场景：陆家别墅客厅·豪门压抑感
+环境音：钟摆声稳定底床，远处雨声从窗外隐约传入
+Lighting: warm-gold-tinted dim interior light, single desk lamp as key from screen-right, soft amber fill, deep shadow on left wall
 
-@陆知意 almond eyes, petite nose bridge, pale lips,
-three-quarter facing left toward camera, standing at middle zone right side, midground;
-tense posture, fingers gripping document edge
+@陆知意 杏眼·小巧鼻梁·浅色唇，
+three-quarter facing left toward camera, standing at middle zone right side near desk, midground；
+身体僵立前倾，右手紧攥合同边缘指节发白，左手垂于腰侧微颤
 
-@陆震东 broad forehead, stern brow ridge, thin pressed lips,
-facing screen-left in profile, seated at lower-middle zone center behind desk, midground;
-leaning back with arms crossed, cold downward gaze at document
+@陆震东 宽额·严厉眉骨·薄抿唇，
+facing screen-left in profile, seated at lower-middle zone center behind desk, midground；
+身体向后靠于椅背，双臂交叉环胸，冷眼下垂注视合同
 
-Lighting: warm-gold-tinted dim interior light, single desk lamp as key from screen-right,
-soft amber fill, deep shadow on left wall
-Props: contract document held by 陆知意 at middle zone, cream-colored pages visible
+道具：奶白色合同文件握于陆知意手中，位于画面中区；台灯位于画面右侧下区前景
 
-[0–3s] Medium close-up on 陆知意, locked-off static shot. 
-She stands frozen, document trembling slightly in her grip. 
-Jaw clenches once, a shallow breath drawn through nose. 
-Her eyes scan the final line of text—brows pinch inward 0.3s delayed reaction, 
-then lips part as if to speak but hold. Pendulum clock ticks steadily.
-陆震东 in soft-focus background maintains crossed-arm posture, 
-chin tilted 2 degrees upward, watching with flat unblinking gaze.
+[0–3s] Medium close-up on 陆知意, locked-off static shot.
+陆知意身体僵住，合同在指间微微颤抖，下颌紧咬一次，鼻腔轻吸一口气。
+视线扫过合同最后一行，眉心0.3秒延迟后微皱，唇瓣微启但未发声。
+陆震东在背景虚焦处维持交叉双臂姿态，下颌上抬2度，目光平静未眨。
+环境音：钟摆声持续稳定。
 
 [3–7s] Slow push-in from medium to medium close-up on 陆知意's face.
 台词："这份协议……是你早就准备好的？"
-Her jaw opens with controlled tension, each syllable deliberate, 
-breath visible between phrases, lower lip trembles on final word.
-Eyes lift from document to meet 陆震东's gaze—
-a 0.5s pause of disbelief before brows soften into wounded realization.
-陆震东: subtle nostril flare, uncrosses right arm to tap desk once with index finger.
-Ambient: clock tick continues, distant rain patter from window.
+下颌缓慢张开克制用力，每个字发音清晰分明，呼吸在句间可见，尾字"吗"下唇微颤。
+双眼从合同抬起对上陆震东的视线，0.5秒的不敢置信停顿，眉心从紧锁转为受伤的松懈。
+陆震东：鼻翼轻颤一下，右臂从交叉姿态松开，食指在桌面轻敲一下。
+环境音：钟摆声持续，窗外雨声渐强。
 
-[7–10s] [CUT TO: over-shoulder from behind 陆知意, framing 陆震东's face]
+[7–10s] 【切景：过肩镜头，从陆知意背后拍向陆震东面部】
 Over-shoulder push-in toward 陆震东.
-He holds silence for 1.2s—a deliberate power pause. 
-Corner of mouth lifts 1mm into controlled micro-smile.
+陆震东静默1.2秒——一次刻意的权力停顿。
+嘴角1毫米微扬，克制的微笑浮现。
 台词："准备好的？我只是比你更了解这个家。"
-Voice low and even, jaw movement minimal, each word clipped.
-陆知意's shoulder in foreground rises slightly—inhale of suppressed anger.
-Her fingers at frame bottom curl tighter around document, knuckles whitening.
-★30-SECOND PAYOFF TRIGGER: power reversal confirmed through 陆震东's smile.
+声音低沉平稳，每个字清晰切断，下颌动作极小。
+陆知意前景肩部轻微上抬——压抑愤怒的深吸一口气。
+她前景画面底部的手指更用力握紧合同，指节骨节凸起发白。
+★本拍为30秒爽点触发：权力翻转通过陆震东的微笑完成确认。
 ```
 
 ★ **终审判断**：如果最终内容看起来像「说明书字段」或「低密度两段概述」，就是错；如果看起来像**按时间推进的可执行镜头描述**，才是合格投喂包。
+
+---
+
+### 11.6 语言分层铁律（v4.1.1 核心补丁）
+
+★★★ 直接投喂版必须严格遵循「中英分层·各司其职」策略。违反此铁律的投喂包直接打回。
+
+#### ① 语言分层总表
+
+| 内容类型 | 语言 | 理由 |
+|---------|------|------|
+| 全局约束关键词（画质/画幅/音频/一致性工程参数） | **英文** | Seedance对英文工程术语识别更稳定 |
+| 镜头语言（运镜/景别/机位） | **英文** | 专业术语英文标准化（dolly zoom/rack focus/medium close-up） |
+| 画面分区 | **英文** | upper/middle/lower zone, foreground/midground/background |
+| 朝向关键词 | **英文** | facing camera, facing screen-left/right, three-quarter facing 等 |
+| 光线描述 | **英文** | harsh side lighting, rim lighting 等经测试关键词 |
+| Negative Prompt | **英文** | 独立字段，Seedance负面词标准 |
+| **表演动作/表情/呼吸/嘴型/肢体** | **中文** | ★ 中文描述可传达细腻情绪，Seedance中文理解足够准确 |
+| **面部特征词** | **中文** | ★ 杏眼/浓眉/高鼻梁等更精准 |
+| **服化道状态描述** | **中文** | ★ 服饰质感、褶皱、污渍等描述中文更精细 |
+| **环境音描述** | **中文** | ★ 中文描写情感氛围更准 |
+| **切景标志** | **中文** | ★ 【切景：过肩镜头，从X背后拍向Y面部】 |
+| **台词** | **中文原文** | ★★★ 剧本原句一字不改，严禁翻译 |
+| **角色姓名** | **中文**（@姓名） | ★ 与Seedance资产图绑定标识一致 |
+| **场景名称** | **中文** | ★ 保持创作理解 |
+| **道具名称** | **中文** | ★ 中文道具描述精度高 |
+| **配角反应** | **中文** | ★ 表演描述一律中文 |
+| **情绪余韵** | **中文** | ★ 表演描述一律中文 |
+
+#### ② 绝对禁止的语言混乱
+
+| 禁止写法 | 判定 |
+|---------|------|
+| 台词被翻译成英文（如 `"This contract... was prepared by you?"`） | 直接打回 |
+| 角色名英文化（如 `@LuZhiyi` 或 `@Lu Zhiyi`） | 直接打回 |
+| 表演动作用英文（如 `jaw clenches, brows pinch inward`） | 直接打回（虽然经典但违反铁律） |
+| 环境音用英文（如 `pendulum clock ticking, distant rain`） | 直接打回 |
+| 切景标志用英文（如 `[CUT TO: medium close-up of 陆知意]`） | 直接打回 |
+| 道具名用英文（如 `cream-colored contract document`） | 直接打回 |
+| 面部特征用英文（如 `almond eyes, petite nose bridge`） | 直接打回 |
+| 服化道状态用英文 | 直接打回 |
+| 镜头运镜用中文（如"缓推"代替 `slow push-in`） | 直接打回（违反英文工程语言规则） |
+| 画面分区用中文（如"画面中区"代替 `middle zone`） | 直接打回 |
+| 朝向用中文方位（如"面朝3点"代替 `facing screen-right`） | 直接打回（仅内部存档版可用时钟方位） |
+
+#### ③ 一行中允许中英混合（标准写法）
+
+```
+正确：
+[3–7s] Slow push-in from medium to medium close-up on 陆知意's face.
+台词："这份协议……是你早就准备好的？"
+下颌缓慢张开克制用力，每个字发音清晰分明。
+
+错误（全中文运镜）：
+[3–7s] 缓推从中景到中近景对焦陆知意脸部。
+台词："这份协议……是你早就准备好的？"
+下颌缓慢张开克制用力。
+
+错误（全英文表演）：
+[3–7s] Slow push-in from medium to medium close-up on 陆知意's face.
+Dialogue: "Is this contract something you prepared long ago?"
+Her jaw opens with controlled tension, each syllable deliberate.
+```
+
+#### ④ 字符级一致铁律（跨SEG语言规则）
+
+- 场景光线英文关键词字符级复制（见第七章7.7）
+- 服化道Level 1/2 中文差异描述字符级复制
+- 段尾锁定中英文混合字段，下一SEG开始人物位置关系必须逐字复制
+- 同义词替换（英文或中文）= 直接打回
+
+#### ⑤ 自检问题（每个SEG输出前必过）
+
+- [ ] 所有台词是中文原文且一字不改？
+- [ ] 所有角色名是中文@姓名？
+- [ ] 所有表演动作/表情/呼吸/嘴型是中文？
+- [ ] 所有面部特征/服化道状态是中文？
+- [ ] 所有环境音描述是中文？
+- [ ] 所有切景标志是中文【切景：___】格式？
+- [ ] 所有道具名是中文？
+- [ ] 所有镜头语言（运镜/景别/机位）是英文关键词？
+- [ ] 所有画面分区（upper/middle/lower zone）是英文？
+- [ ] 所有朝向（facing camera 等）是英文？
+- [ ] 光线描述是英文关键词且字符级复制同场景固定串？
+- [ ] 全局约束是英文关键词组且含防油腻四件套？
+
+12项全过才能提交。
 
 ---
 
@@ -895,6 +1009,11 @@ Her fingers at frame bottom curl tighter around document, knuckles whitening.
 | 18 | Negative Prompt写入了正文Positive Prompt中，或Negative Prompt缺失BGM相关禁止项 |
 | 19 | 运镜去重日志未更新，或单集A–G七类运镜覆盖不全（至少各1次），或同一具体运镜超过2次 |
 | 20 | 面部近景/特写 + 关键台词拍点使用了快推/手持晃/希区柯克变焦等高运动强度镜头 |
+| 21 | 台词被翻译成英文（台词必须100%中文原文保留） |
+| 22 | 角色名被英文化（如@LuZhiyi），必须统一用中文@姓名 |
+| 23 | 表演动作/表情/呼吸/嘴型/肢体描述用了英文（必须中文） |
+| 24 | 环境音/切景标志/道具名/面部特征/服化道状态用了英文（必须中文） |
+| 25 | 镜头语言/画面分区/朝向/光线描述用了中文（必须英文关键词） |
 
 ---
 
@@ -917,6 +1036,11 @@ Her fingers at frame bottom curl tighter around document, knuckles whitening.
 | □ | 段尾锁定已完整填写（七项全覆盖） | □ | 段尾锁定与下一SEG开始状态字符级一致 |
 | □ | 投喂包为连续时间段描述，非字段化说明书 | □ | 运镜选择已参照运镜扩展库+去重日志 |
 | □ | 面部特写段未使用高运动强度镜头 | □ | 30秒爽点已在对应SEG拍点中标注触发 |
+| □ | 所有台词是中文原文且一字不改 | □ | 所有角色名是中文@姓名格式 |
+| □ | 所有表演动作/表情/呼吸/嘴型/肢体是中文描述 | □ | 所有面部特征词和服化道状态是中文 |
+| □ | 所有环境音描述和道具名是中文 | □ | 所有切景标志是中文【切景：___】格式 |
+| □ | 所有镜头语言（运镜/景别/机位）是英文关键词 | □ | 所有画面分区和朝向是英文 |
+| □ | 光线描述是英文关键词且字符级复制同场景固定串 | □ | 符合11.6语言分层铁律自检12项全过 |
 
 ★ **终审判断**：如果最终内容看起来像【说明书字段】或【低密度两段概述】，就是错；如果看起来像按时间推进的可执行镜头描述，才是合格投喂包。
 
