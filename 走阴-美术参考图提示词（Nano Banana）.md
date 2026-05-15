@@ -13,99 +13,99 @@
 
 ```
 【Nano Banana Prompt · 图 1】
-Chinese 3D animation character portrait, half-body front view,
-young woman with dark red gu-markings (蛊纹) crawling from temples
-down sealing both eye sockets like living tattoos with visible
-subcutaneous insects beneath skin, pale complexion, sharp facial
-features, tilted head slight smirk expression, black hair pulled up
-with silver Miao-style crown (银冠) with dangling chain tassels,
-dark red veined markings undulating subtly, silver armor collar
-visible at neckline, strong contrast harsh lighting from side,
-dark background fading to black, hyperdetailed skin pores and
-gu-marking texture, no smile showing teeth, mysterious and cold
-atmosphere, 3D render style semi-realistic
+Eastern gothic semi-realistic 3D animation character portrait,
+close-up face shot, young woman "Ah Qing" the Yin-walker,
+split-colored center-parted hair one side ink-black one side
+silver-white with wispy natural strands, small silver hair ornaments
+and red tassels scattered in hair, EYES CLOSED with horizontal
+blood-stain mark across both eyes like a sealing sigil, blood mark
+naturally blurred edges slightly dripping downward, NO lip piercings
+NO facial stitches NO metal objects on face, deathly pale complexion,
+delicate refined features, expression languid cold slightly disdainful,
+aura ethereal chilling hauntingly beautiful restrained,
+upper outfit visible in indigo-blue and dark-red with minimal silver
+ornaments coffin-shaped talisman plate and red cord details,
+background simple cold grey with light fog atmosphere,
+realistic material textures hyperdetailed skin, 3D render cinematic
 
-Negative: cartoon, anime, bright colors, smiling, Western fantasy,
-          photorealistic, blurry
+Negative: open eyes, heavy armor, bright colors, cute, smiling,
+          lip piercings, facial stitches, metal on face, anime style
 ```
 
 ### 图 2 · 三视图正面（3:4 · 全身比例锚定）
 
 ```
 【Nano Banana Prompt · 图 2】
-Chinese 3D animation character full-body front view turnaround sheet,
-young woman standing straight facing camera, wearing layered outfit:
-outer layer silver Miao-style scale armor (银甲) like flower petals
-over black bone armor with embedded crawling insects pattern,
-bottom layer black pleated skirt (百褶裙) reaching ankles,
-silver boots with gu-insects clustered beneath soles,
-holding maple wood staff (枫木角杖) in right hand with silver
-Miao-dragon (银苗龙) head at top containing bone bell,
-white membrane lantern hanging from staff top,
-silver crown with chain tassels on head, silver bracelet on left wrist,
-dark red gu-markings visible on forehead sealing eyes,
-T-pose reference proportions, neutral grey background,
-full body visible head to toe, 3D character design sheet style
+Eastern gothic semi-realistic 3D animation character full-body
+front view reference sheet, young woman standing straight,
+split-colored center-parted hair reaching mid-back one side ink-black
+one side silver-white, small silver ornaments and red tassels in hair,
+eyes closed with horizontal blood-stain sealing mark across eye area,
+wearing sleek indigo-blue and dark-red outfit clean-cut design,
+minimal silver accessories, coffin-shaped talisman plate hanging
+from red cord at chest, red cord wrapping details on wrists,
+silver boots, holding maple wood staff (枫木角杖) in right hand
+with silver Miao-dragon head at top containing bone bell,
+white membrane lantern hanging from staff, T-pose reference,
+neutral grey background, full body head to toe visible,
+3D character design sheet style
 
-Negative: dynamic pose, action, background scenery, cropped
+Negative: dynamic pose, heavy armor, crown, background scenery
 ```
 
 ### 图 3 · 三视图侧面 90°（3:4 · 朝向一致性锚定）
 
 ```
 【Nano Banana Prompt · 图 3】
-Chinese 3D animation character full-body pure side view 90 degrees,
-young woman profile silhouette, silver Miao-armor layered outfit
-clearly showing depth: outer silver petal armor → inner bone armor
-with insect texture → black pleated skirt layers,
-maple wood staff held vertically showing silver dragon head in profile,
-bone bell hanging from dragon mouth visible in silhouette,
-silver crown tassels hanging down behind ear,
-hair bun structure visible from side, gu-markings on temple profile,
-silver boot side view showing slight hover gap beneath sole,
-neutral grey background, character design reference sheet,
-clean silhouette readable, 3D render
+Eastern gothic semi-realistic 3D animation character full-body
+pure side view 90 degrees profile, young woman silhouette showing
+split-colored hair clearly (viewer-facing side shows transition
+from black to white at center part), sleek indigo outfit profile
+showing clean silhouette without bulky armor, red cord details
+visible at waist and wrist, coffin talisman hanging at chest side view,
+maple wood staff held vertically showing silver dragon head profile,
+bone bell silhouette, silver boot side view with slight hover gap,
+neutral grey background, character design reference, clean readable
+silhouette, 3D render
 
-Negative: front view, dynamic, background, 3/4 angle
+Negative: front view, dynamic, 3/4 angle, heavy armor
 ```
 
 ### 图 4 · 三视图 45° 四分之三视角（3:4 · 常用分镜角度锚定）
 
 ```
 【Nano Banana Prompt · 图 4】
-Chinese 3D animation character 3/4 view dynamic pose,
-young woman in slight combat-ready stance tilted head looking at viewer,
-silver Miao-armor with petal-like outer plates slightly separated
-revealing dark bone armor beneath with crawling insect details,
-black pleated skirt mid-flutter showing fabric layers,
-right hand gripping maple staff planted into ground,
-left hand with five fingers spread like a fan joints locked (封山指起手),
-silver crown tassels swaying, gu-markings on face clearly visible
-from this angle, silver boot hovering slightly above ground,
-dramatic side lighting creating harsh highlights on silver surfaces,
-dark atmospheric background, 3D character reference sheet
+Eastern gothic semi-realistic 3D animation character 3/4 view,
+slight combat-ready stance tilted head, young woman with split
+black-white hair flowing dynamically, eyes closed blood-stain mark
+visible from this angle, left hand with five fingers spread like fan
+joints locked (封山指 pose), right hand gripping maple staff planted,
+indigo-blue and dark-red outfit mid-movement showing fabric flow,
+red tassels in hair swaying, coffin talisman swinging slightly,
+dramatic side lighting creating harsh highlights on silver accessories,
+dark atmospheric background with cold grey fog, 3D character reference
 
-Negative: flat, front-only, no depth, cartoon style
+Negative: flat, front-only, heavy armor, open eyes in normal state
 ```
 
 ### 图 5 · 动态/气场状态图（3:4 · 觉醒态锚定）
 
 ```
 【Nano Banana Prompt · 图 5】
-Chinese 3D animation character awakened state full body,
-young woman floating slightly above ground, outer silver armor
-peeled away curling inward like shedding skin revealing dark bone
-armor with glowing embedded insects, forehead gu-markings split
-open like zipper revealing rotating dark void (黑洞) composed of
-swarming insects, four human-skin banners (引魂幡) erupting from
-spine markings billowing behind her with thousands of tiny mouths
-on banner surface, golden energy color (#D4A017) emanating from
-forehead void and bone armor cracks, black pleated skirt billowing
-upward like ink lotus petals, hair floating with golden highlights,
-overall atmosphere: dark horror meets divine golden power,
-strong contrast golden glow vs black void, 3D render dramatic lighting
+Eastern gothic semi-realistic 3D animation character AWAKENED state,
+young woman floating slightly, blood-stain mark on eyes CRACKED OPEN
+like splitting seal revealing rotating dark void (黑洞) of swarming
+insects where eyes should be, dark red gu-markings NOW VISIBLE
+emerging from beneath skin across neck arms and exposed areas,
+four human-skin banners (引魂幡) erupting from spine area billowing
+behind with thousands of tiny mouths on surface, split black-white
+hair floating with golden (#D4A017) energy highlights on white side,
+indigo outfit now with glowing red-gold cracks along seams where
+gu-markings show through fabric, overall: ethereal horror meets
+divine golden power, strong contrast golden glow vs dark void,
+3D render dramatic lighting
 
-Negative: cute, peaceful, bright daylight, simple design
+Negative: cute, peaceful, normal closed eyes, no markings visible
 ```
 
 ---
@@ -302,32 +302,32 @@ Negative: small scale, indoor, modern, peaceful, no biological elements
 ```
 【跟随部位清单】· 角色名：阿青
 ═══════════════════════════════════════════════════════
-部位 1：银甲外层（花瓣甲片）
-  材质：锻打苗银·錾刻纹
-  重量感：中（银甲片·响应中·幅度中·消散中）
-  默认运动幅度：步态微震·战斗中大幅摆动
+部位 1：轻装衣摆（靛蓝暗红下摆）
+  材质：轻薄织物·多层叠穿
+  重量感：轻（薄布·响应快·幅度大·消散慢）
+  默认运动幅度：步态轻摆·旋身时展开如墨莲花瓣
   能量状态：
-    → 无能量：银灰高光·无发光
-    → 低能量（蛊纹激活）：甲片缝隙暗红微光渗出
-    → 高能量（觉醒）：甲片如花瓣向内卷曲脱落·露出骨甲
+    → 无能量：靛蓝暗红常态·无发光
+    → 低能量（蛊术激活）：衣缝处暗红蛊纹微光渗出
+    → 高能量（觉醒）：衣摆粒子化为金色蛊虫→再聚合（终极态专属）
 
-部位 2：百褶裙摆
-  材质：黑色厚棉布·多层褶皱
-  重量感：中（宽摆·响应中·幅度大·消散慢）
-  默认运动幅度：步态轻摆·旋身时展开如墨莲
+部位 2：双色发（中分墨黑/银白）
+  材质：轻盈发丝·自然碎发
+  重量感：轻（发丝·响应快·幅度大·消散慢）
+  默认运动幅度：随头部动作飘动·银白侧可抽出情蛊丝
   能量状态：
-    → 无能量：纯黑·无光
-    → 低能量：裙摆边缘隐约暗红反光
-    → 高能量：裙摆粒子化为金色蛊虫→再聚合（终极态专属）
+    → 无能量：黑白分明·自然光泽
+    → 低能量：银白侧发梢暗红微光（蛊纹向发丝延伸）
+    → 高能量：银白侧发丝被金色光染亮·末端可抽出情蛊丝
 
-部位 3：银冠流苏（链条+吊坠）
-  材质：苗银细链
-  重量感：轻（细链·响应快·幅度大·消散慢）
-  默认运动幅度：随头部动作摆动·可抽出情蛊丝
+部位 3：红绳流苏+发间银饰
+  材质：编织红绳+苗银小件
+  重量感：轻（细绳+小饰件·响应快·幅度中·消散中）
+  默认运动幅度：随头部/风向摆动·碰撞有轻微声响
   能量状态：
-    → 无能量：银灰·碰撞清脆声
-    → 低能量：链条末端暗红微光
-    → 高能量：链条被黑洞吸力牵引向前
+    → 无能量：红绳暗红·银饰冷灰
+    → 低能量：红绳微微发光（蛊术通过红绳传导）
+    → 高能量：红绳被黑洞吸力牵引·银饰震颤
 
 部位 4：引魂幡（四只·觉醒后专属）
   材质：人皮质感（SSS散射·表面嘴唇开合）
@@ -337,17 +337,17 @@ Negative: small scale, indoor, modern, peaceful, no biological elements
     → 仅高能量态存在（开相后才涌出）
     → 幡面人皮嘴同步开合·金色光从嘴内透出
 
-部位 5：发丝
-  材质：黑色长发（盘发·战斗中散落）
-  重量感：轻（发丝·响应快·幅度大·消散慢）
-  默认运动幅度：蛊纹蔓延时被排开·风吹摆动
+部位 5：棺形法牌（胸前红绳系挂）
+  材质：银质棺形小牌·浮雕虫蚀纹
+  重量感：中（金属小牌·响应中·幅度小·消散快）
+  默认运动幅度：随身体动作微摆·与红绳联动
   能量状态：
-    → 无能量：纯黑·自然光泽
-    → 低能量：发根处暗红微光（蛊纹延伸入发际）
-    → 高能量：发丝被金色羊水光染亮·末端可抽出情蛊丝
+    → 无能量：银灰冷光·浮雕纹暗淡
+    → 低能量：浮雕虫蚀纹暗红发光
+    → 高能量：法牌整体金色·成为蛊术释放的辅助锚点
 ═══════════════════════════════════════════════════════
 ★ 铁律：STEP 5 八段式【运动物理】必须逐一覆盖所有部位
-★ 铁律：能量状态颜色必须与当前剧情阶段对齐（初始暗红/觉醒金色）
+★ 铁律：能量状态颜色必须与当前剧情阶段对齐（初始无光/觉醒金色）
 ```
 
 ---
