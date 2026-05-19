@@ -1,10 +1,13 @@
 # 《**劫》宫格分镜图提示词（Nano Banana）
 
-> ★ 本文档产出的宫格分镜图将作为 Seedance 2.0 的 style_reference 上传
-> ★ 每张宫格图对应一个 SEG（4-15秒），由 2-4 格关键帧组成
+> ★ 严格按剧本逐段对应·中文提示词
+> ★ 每格画幅：16:9 横幅
+> ★ 排列规则：从左到右一横排最多3格
+> ★ 不足的格位填充纯白色块
+> ★ 2-3格 = 一横排（不足补白）
+> ★ 4-6格 = 六宫格（上3下3·不足补白）
+> ★ 7-9格 = 九宫格（上3中3下3·不足补白）
 > ★ 宫格图 + 时间轴提示词 = 双重约束投喂 Seedance
-> ★ 工具：Nano Banana（Flux / MidJourney）
-> ★ 景别切换原则：相邻格景别跨度≤2级（如全景→中景✓ 全景→特写✗）
 
 ---
 
@@ -27,663 +30,596 @@
 
 ---
 
-## 宫格设计总原则
+## 宫格规则说明
 
 ```
-┌──────────────────────────────────────────────────────┐
-│  宫格分镜图设计铁律                                    │
-│                                                        │
-│  ① 每格 = 该Clip内一个关键时间节点的静态画面           │
-│  ② 格与格之间必须有视觉连贯性（同场景/同角色/同色调）  │
-│  ③ 景别切换必须流畅：                                  │
-│     全景 → 中全景 → 中景 → 中近景 → 近景 → 特写      │
-│     相邻格最多跨2级，不可从全景直接跳特写              │
-│  ④ 角色朝向在所有格中保持一致（不翻转）               │
-│  ⑤ 光影/色调在所有格中保持统一基调                    │
-│  ⑥ 宫格比例：9:16竖屏内垂直排列                      │
-│     → 2格：上下各占50%                                │
-│     → 3格：上中下各占33%                              │
-│     → 4格：2×2宫格排列                                │
-│  ⑦ 每格之间用1px细白线分隔                            │
-└──────────────────────────────────────────────────────┘
+┌─────────────────────────────────────────┐
+│  每格画幅：16:9（如1920×1080）           │
+│  排列：从左到右·一排最多3格              │
+│  空位：纯白色块填充                      │
+│                                          │
+│  3格示例：[画面1][画面2][画面3]           │
+│  4格示例：[画面1][画面2][画面3]           │
+│           [画面4][  白  ][  白  ]         │
+│  5格示例：[画面1][画面2][画面3]           │
+│           [画面4][画面5][  白  ]          │
+│  6格示例：[画面1][画面2][画面3]           │
+│           [画面4][画面5][画面6]           │
+└─────────────────────────────────────────┘
 ```
 
 ---
 
 
-## SEG-01 · 妖星坠落·山门震动（3s · 2格）
+## SEG-01 · 山门建置+妖星坠落（5s · 4格·六宫格）
+
+**剧本对应段落：**
+> 大禹门立于云海之巅……一名白发剑修踏上石阶……天空忽然暗了下来。远处妖星坠落，云层被撕开一道血色裂缝。
 
 ```
-宫格结构：上下2格（9:16竖屏·上下各50%）
-格1 = T+0s 天空裂缝+妖星坠出（大全景仰视）
-格2 = T+2.5s 地面碎裂+妖气上涌（中景俯视地面）
-景别切换：大全景仰视 → 中景俯视（从天到地）
+宫格排列（六宫格·4格+2白）：
+[格1 云海山门全景][格2 剑仙踏上石阶][格3 天空骤暗]
+[格4 妖星坠落裂缝][    白    ][    白    ]
+
+景别切换：大全景 → 中全景 → 大全景天空 → 大全景天空（连贯天地变化）
 ```
 
 ```
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━
 【操作指引】
-  垫图上传：@图片11 大禹门山门·夜景妖劫版
-  垫图权重：0.30-0.40（场景氛围参考·不限制构图）
-  工具模式：图生图 / Flux img2img / MJ --sref
-  备注：本段无角色出现·仅需场景参考图
+  垫图上传：@图片11 大禹门山门夜景 + @图片1 剑仙正面
+  垫图权重：0.35-0.40
+  工具模式：图生图 / MJ --cref [@图片1] --sref [@图片11]
+  备注：格1-2为日景/黄昏·格3-4转为暗夜
+       色温从暖渐变为冷再变为红·体现天色突变
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ```
 
-**Nano Banana 提示词：**
+**提示词：**
 
 ```
 prompt:
-Game CG quality Chinese fantasy 3D animation storyboard,
-9:16 vertical aspect ratio, two-panel vertical layout separated
-by thin 1px white line at center, consistent dark indigo #2C3E50
-night atmosphere across both panels, cinematic lighting, highly
-detailed:
+游戏CG级国风仙侠3D动画分镜板，16:9横幅画面，从左到右
+排列4格（上排3格+下排1格+2格纯白），电影级光影质感，
+高精度材质渲染：
 
-TOP PANEL (upper 50%):
-extreme low angle looking up 75 degrees at night sky, indigo dark
-sky #2C3E50 torn open with violent crimson crack #C0392B glowing
-with molten edges extending diagonally, a blazing meteor with
-orange-red #E67E22 fire trail falling through the crack, ancient
-mountain gate temple silhouette visible in mid-ground backlit by
-crimson light, volumetric crimson light pressing down from fracture,
-cloud sea churning in background, composition: sky crack occupying
-upper 60%, temple silhouette 25%, stone stair edge at bottom 15%
+格1（上排左）：
+大全景俯拍，大禹门山门立于云海之巅，千层灰白石阶从云海
+中直通山门，飞檐翘角青铜门扉，两侧玉石栏杆龙纹雕刻，
+云海翻涌青峰如黛，晨昏暖光照亮山门西侧，金色体积光穿
+过云层，画面气势宏大仙气飘渺，色调暖金+靛蓝云海
 
-BOTTOM PANEL (lower 50%):
-medium shot looking down at ancient grey-white stone staircase,
-radial cracks spreading outward from center impact point, dark green
-miasma #27AE60 seeping upward from crack fissures, stone debris
-floating upward 0.3m from seismic tremor, same crimson light from
-above illuminating the cracked surface, dragon-wave carved patterns
-on stair edges visible under red light
+格2（上排中）：
+中全景低角仰拍35度，一名白发剑修踏上石阶最后几步，银白
+蓝调长袍随风微摆，右手握剑未出鞘剑身微光，面容冷峻沉静，
+石阶两侧弟子列阵迎新（远景虚化人群），晨光从身后照射形成
+轮廓光，发丝根根可辨，画面上方可见山门飞檐
 
-both panels share: dark indigo base tone, crimson crack light as
-primary illumination, professional CG storyboard, no text no labels
+格3（上排右）：
+大全景仰视天空，原本暖金色的天空骤然暗沉变为靛蓝#2C3E50，
+乌云从四周边缘急速涌入遮蔽阳光，山门建筑剪影在暗沉天空
+下方，色温从暖金急转为冷靛蓝，画面上70%为变暗天空下30%
+为山门轮廓，体现"天空忽然暗了下来"的瞬间
+
+格4（下排左）：
+大全景仰视天空，靛蓝暗天右上方撕裂一道朱砂红裂缝#C0392B，
+裂缝边缘熔岩质感自发光，妖星带橙红#E67E22火尾从裂缝中
+坠出，火尾拖曳占画面1/3，云层被红光照亮翻涌，体积红光
+从裂缝向下压迫
+
+四格共享：同一大禹门山门场景，色温从格1暖金→格2暖→格3
+骤变冷靛蓝→格4靛蓝+朱砂红撕裂，叙事连贯不割裂
 
 negative prompt:
-cartoon, anime, bright daylight, blurry, low quality, text, labels,
-sketch style, horizontal layout, single panel only
+卡通，二次元，明亮欢快，模糊，低质量，文字标签，竖屏，
+单张画面
 ```
 
 ---
 
 
-## SEG-02 · 剑仙拔剑出鞘（5s · 3格）
+## SEG-02 · 封印震动+相柳声音+九首蛇影（6s · 5格·六宫格）
+
+**剧本对应段落：**
+> 大禹门镇守多年的古老封印开始震动，山门石阶寸寸开裂，黑色妖气从裂缝中涌出。一道低沉的声音从九渊深处传来。"十二载已至，吾……归来了。"守门弟子惊恐后退。"是八荒妖主！""相柳的封印破了！"云层之后，九道巨大的蛇影缓缓睁开猩红双目。
 
 ```
-宫格结构：上中下3格（9:16竖屏·各占33%）
-格1 = T+0s 剑仙侧身静立（中全景）
-格2 = T+2s 拔剑蓝色剑气爆闪（中景）
-格3 = T+4s 飞剑阵列成形（中全景后拉）
-景别切换：中全景 → 中景 → 中全景
-```
+宫格排列（六宫格·5格+1白）：
+[格1 石阶开裂妖气涌出][格2 守门弟子惊恐后退][格3 九渊深处声波可视化]
+[格4 九道蛇影猩红双目][格5 妖潮从山谷冲出][    白    ]
 
-```
-━━━━━━━━━━━━━━━━━━━━━━━━━━━
-【操作指引】
-  垫图上传：@图片1 剑仙正面 + @图片3 万剑归宗技能态 + @图片11 山门夜景
-  垫图权重：0.40-0.50（角色+技能特效需高度还原）
-  工具模式：MJ --cref [@图片1] --cw 80 --sref [@图片11]
-           或 Flux img2img 上传@图片1为主图·@图片3为辅助参考
-  备注：三格角色同一朝向同一服装
-       格2-3的蓝色剑气参考@图片3万剑归宗技能态的特效形态
-━━━━━━━━━━━━━━━━━━━━━━━━━━━
-```
-
-**Nano Banana 提示词：**
-
-```
-prompt:
-Game CG quality Chinese fantasy 3D animation storyboard,
-9:16 vertical, three-panel vertical layout separated by 1px white
-lines into equal thirds, consistent night scene crimson-cracked sky
-and cracked stone staircase, cinematic lighting, highly detailed:
-
-TOP PANEL (upper 33%):
-medium-full shot low angle 35 degrees, white-haired male sword
-immortal silver-white robes blue trim standing calm side stance on
-cracked stone steps, right hand gripping sword handle blade pointing
-down faint blue glow #4A90D9, weight forward ready posture, calm
-half-closed eyes slight frown, individual white hair strands visible,
-fabric texture detailed, crimson sky crack rim light on robes
-
-MIDDLE PANEL (middle 33%):
-medium shot same angle SAME CHARACTER same direction, exact moment
-of sword draw blade halfway out, bright blue energy burst #4A90D9
-exploding outward 1.5m from blade, ring-shaped blue energy wave,
-robes swept dramatically backward maximum billow, white hair blown
-back blue luminescence, eyes widening blue glow in pupils, sword
-tassel peak swing
-
-BOTTOM PANEL (lower 33%):
-medium-full shot pulled back wider, same character sword drawn held
-to side, 30+ luminous blue flying swords fan array formation behind
-upper body each with blue energy trail, circular wind pressure ripple
-at feet expanding 1.5m pushing debris, robes settling, hair falling
-back with residual blue glow, controlled confidence expression
-
-all panels: same character same direction throughout, same location,
-progressive still→action→result, blue #4A90D9 + silver-white +
-crimson #C0392B accent, professional CG storyboard
-
-negative prompt:
-direction change, mirroring, different characters, cartoon, anime,
-sketch, daylight, blurry, text, horizontal, single panel
-```
-
----
-
-## SEG-03 · 相柳九首显现·妖潮涌出（5s · 3格）
-
-```
-宫格结构：上中下3格（9:16竖屏·各占33%）
-格1 = T+0s 第一颗蛇首探出（大全景仰拍）
-格2 = T+3s 九首全部显现（大全景仰拍）
-格3 = T+4.5s 地面妖潮涌出（中景俯视）
-景别切换：大全景仰拍 → 同角度内容增加 → 中景俯视
+景别切换：中景地面 → 中全景弟子 → 中近景声波 → 大全景仰拍天空 → 大全景山谷
 ```
 
 ```
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━
 【操作指引】
-  垫图上传：@图片9 相柳九首压下 + @图片10 相柳主首特写 + @图片12 妖潮
-  垫图权重：0.35-0.45（BOSS形态还原·构图由提示词主导）
-  工具模式：MJ --cref [@图片9] --cw 70
-           或 Flux img2img 上传@图片9为主图
-  备注：格1-2用相柳参考图·格3用妖潮参考图
-       优先保证相柳九首的猩红眼+深绿鳞形态还原
-━━━━━━━━━━━━━━━━━━━━━━━━━━━
-```
-
-**Nano Banana 提示词：**
-
-```
-prompt:
-Game CG quality Chinese fantasy 3D animation storyboard,
-9:16 vertical, three-panel vertical layout 1px white line separators,
-extremely dark oppressive atmosphere only crimson eyes and toxic green
-glow as light, highly detailed:
-
-TOP PANEL (upper 33%):
-extreme low angle 80 degrees straight up at pitch-black sky, churning
-black-green storm clouds, ONE massive serpent head emerging from cloud
-base 10x human scale, one pair crimson glowing eyes #C0392B opening
-like blood lanterns, dark green-black scales wet toxic sheen, toxic
-green miasma #27AE60 cascading downward from cloud base
-
-MIDDLE PANEL (middle 33%):
-same extreme low angle, NOW nine massive serpent heads ALL visible
-dome/canopy formation filling entire sky, nine pairs crimson eyes
-#C0392B blazing simultaneously pattern of red point-lights in darkness,
-dark green toxic miasma waterfall between heads, each head detailed
-dark scales #27AE60 wet gleam fangs dripping toxic liquid, overwhelming
-oppressive scale blocking ALL sky
-
-BOTTOM PANEL (lower 33%):
-medium shot looking down ground level, stone staircase widening cracks,
-dark shadowy creature mass surging UPWARD from fissures, semi-solid
-shadow forms green-yellow glowing eyes densely packed, hundreds
-climbing out like flood, dark mist trailing each form, faint blue
-glow at frame edge for spatial continuity
-
-all panels: pitch-black #1A1A1A base, only crimson #C0392B and toxic
-green #27AE60 as light, extreme darkness, CG storyboard quality
-
-negative prompt:
-bright colors, daylight, blue sky, friendly, small scale, cartoon,
-anime, sketch, text, single head in middle panel, horizontal
-```
-
----
-
-
-## SEG-04 · 朱雀觉醒（7s · 4格·2×2）
-
-```
-宫格结构：2×2宫格排列（9:16竖屏）
-格1(左上) = T+0s 玉佩发光（中近景）
-格2(右上) = T+2s 小朱雀跌出（中景）
-格3(左下) = T+4.5s 变身中·羽毛变色（中景）
-格4(右下) = T+6.5s 火翼全展（中全景）
-景别切换：中近景 → 中景 → 中景 → 中全景
-```
-
-```
-━━━━━━━━━━━━━━━━━━━━━━━━━━━
-【操作指引】
-  垫图上传：@图片1 剑仙正面（格1用）
-           + @图片7 小朱雀初生形态（格2-3用）
-           + @图片8 小朱雀觉醒火翼形态（格4用）
+  垫图上传：@图片9 相柳九首 + @图片11 山门夜景 + @图片12 妖潮
   垫图权重：0.35-0.45
-  工具模式：
-    推荐分两次生成后拼接：
-      第一次：上传@图片1+@图片7·生成格1+格2
-      第二次：上传@图片7+@图片8·生成格3+格4
-      拼图合成2×2
-    或一次生成：MJ --cref [@图片7] --cw 60（优先朱雀连贯）
-  备注：核心是朱雀变身渐变过程·色温从冷暗逐格变暖金
+  工具模式：MJ --cref [@图片9] --cw 70 --sref [@图片11]
+  备注：格4是本段核心·九对猩红眼在暗云中排列
+       格1-3为地面事件·格4-5为天空+远景妖潮
+       整体色调极暗·仅红色裂缝光+绿色妖气为光源
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ```
 
-**Nano Banana 提示词：**
+**提示词：**
 
 ```
 prompt:
-Game CG quality Chinese fantasy 3D animation storyboard,
-9:16 vertical, four-panel 2x2 grid layout 1px white lines,
-reading order top-left→top-right→bottom-left→bottom-right,
-dark night staircase setting progressive warm-color transformation,
-highly detailed:
+游戏CG级国风仙侠3D动画分镜板，16:9横幅画面，从左到右
+排列5格（上排3格+下排2格+1格纯白），电影级光影质感，
+高精度材质渲染，极暗压迫氛围：
 
-TOP-LEFT: medium close-up male sword immortal waist area, jade
-pendant blazing golden-orange fire #E67E22 cracking from within,
-golden light erupting through surface fractures, silver-white robe
-illuminated warm gold, dark night background green miasma atmosphere
+格1（上排左）：
+中景俯视地面，大禹门山门石阶表面寸寸开裂，放射状裂缝
+从封印中心向外扩散，暗绿色#27AE60妖气从每条裂缝中如
+烟柱般上涌，石阶灰白色#ECF0F1表面被绿光照亮，碎石
+向上飘浮，金色封印符文在裂缝边缘闪烁后暗淡熄灭，古老
+封印正在崩坏的瞬间
 
-TOP-RIGHT: medium shot small baby phoenix 30cm tumbling out of golden
-light particles mid-air, tiny wings flapping unsteadily, soft dawn-
-orange downy feathers subtle glow, large round amber eyes panic,
-dark creature shapes approaching background, cute nervous feathers
-puffed
+格2（上排中）：
+中全景正面，两名守门弟子惊恐后退，白色弟子服面容年轻
+慌张，一人指向天空嘴型张开在喊"相柳的封印破了"，另
+一人已转身要跑，脚下石阶裂缝暗绿妖气缭绕他们脚边，
+背景为暗沉的山门大殿轮廓，氛围恐惧压迫
 
-BOTTOM-LEFT: medium shot same small phoenix body TREMBLING GLOWING,
-feathers transitioning soft orange to blazing golden fire, body
-expanding, energy cracks on surface, golden-orange #E67E22 intensifying,
-air distorting from heat, expression shifting panic to determination
+格3（上排右）：
+中近景，空间中一道低沉声波的可视化表现——靛蓝暗黑空间
+中心一圈圈深红#C0392B声波涟漪向外扩散如水面波纹，声
+波带着古老文字符号碎片"十二载已至"隐约浮现在波纹中
+（不是真正文字·是符文碎片的视觉暗示），极暗氛围仅声
+波涟漪自发红光
 
-BOTTOM-RIGHT: medium-full shot pulled back full wingspan, transformation
-COMPLETE juvenile divine phoenix enormous golden fire wings 2m spread,
-solid feathers base transitioning pure flame energy at tips gold-white,
-eyes burning pure amber-gold, ember particles ascending fountain,
-ground scorched circular pattern, dominated warm golden-white light
+格4（下排左）：
+大全景极低角仰拍80度几乎贴地看天空，靛蓝黑色暴风云层
+翻涌，云层之后九道巨大蛇形影子#1A1A1A隐约可见，九对
+猩红双目#C0392B依次缓缓睁开如十八盏血灯排列在暗云中，
+蛇影尺度巨大占满天空，画面极度压迫——这是虚影非实体，
+猩红眼光是唯一穿透黑暗的光源
 
-all panels: same staircase setting, progressive cold-dark to warm-gold,
-same spatial orientation, smooth transformation sequence, CG quality
+格5（下排中）：
+大全景俯拍山谷，黑色妖潮从山谷深处如潮水般涌出，半实
+体暗影形态的妖物群密密麻麻绿黄色眼睛发光，从谷底向大
+禹门方向冲来，暗绿毒瘴弥漫在妖潮上方如雾层，远景可见
+大禹门石阶底部
+
+五格共享：极暗靛蓝#2C3E50底色，仅猩红#C0392B眼光+暗
+绿#27AE60妖气为光源，封印崩坏的灾厄降临感，连贯叙事
+从地面裂→弟子恐惧→声音传来→天空蛇影→妖潮冲出
 
 negative prompt:
-adult phoenix early panels, inconsistent, cartoon, anime, sketch,
-text, daylight, cool throughout, single panel, horizontal
+明亮，日光，卡通，二次元，友善氛围，模糊，文字标签，
+竖屏，单张画面
 ```
 
 ---
 
-## SEG-05 · 灵狐撑伞落地·桃花法阵（7s · 3格）
+
+## SEG-03 · 灵契发光+小朱雀出场+拔剑（7s · 5格·六宫格）
+
+**剧本对应段落：**
+> 白发剑修站在原地，手中长剑轻轻震动。他低头看向腰间的灵契玉佩。玉佩中，一点赤色火光忽然亮起。下一秒，一只小朱雀从火光中跌跌撞撞飞出……小朱雀："主人，再不出手，我们就真要被咬碎啦！"白发剑修拔剑。蓝色剑气自剑锋炸开，数道飞剑在他身后凝聚。
 
 ```
-宫格结构：上中下3格（9:16竖屏·各占33%）
-格1 = T+0s 桃花飘入+灵狐下降（大全景）
-格2 = T+3s 着地·伞触地·法阵扩散（中景）
-格3 = T+6s 法阵全开·妖物冻结（中全景）
-景别切换：大全景 → 中景 → 中全景
+宫格排列（六宫格·5格+1白）：
+[格1 剑仙站原地剑震动][格2 低头看玉佩发光][格3 小朱雀跌出]
+[格4 小朱雀慌张说话][格5 拔剑剑气炸开飞剑凝聚][    白    ]
+
+景别切换：中景 → 中近景腰部 → 中景 → 中近景朱雀 → 中景动作
+```
+
+```
+━━━━━━━━━━━━━━━━━━━━━━━━━━━
+【操作指引】
+  垫图上传：@图片1 剑仙正面 + @图片3 万剑归宗技能态
+           + @图片7 小朱雀初生形态
+  垫图权重：0.40-0.50（角色+朱雀需高还原）
+  工具模式：MJ --cref [@图片1] --cw 75
+           辅助 --sref [@图片7]（朱雀形态参考）
+  备注：格1-2剑仙为主·格3-4朱雀为主·格5回到剑仙
+       格5参考@图片3万剑归宗技能态的蓝色剑气+飞剑形态
+━━━━━━━━━━━━━━━━━━━━━━━━━━━
+```
+
+**提示词：**
+
+```
+prompt:
+游戏CG级国风仙侠3D动画分镜板，16:9横幅画面，从左到右
+排列5格（上排3格+下排2格+1格纯白），电影级光影质感，
+高精度材质渲染，暗夜山门石阶场景：
+
+格1（上排左）：
+中景正面，白发剑仙银白蓝调长袍站在开裂石阶上纹丝不动，
+面容冷峻审视前方，右手握剑未出鞘但剑身在微微震动——震
+动可视化为剑身周围极微弱的蓝色光点颤动，背景为暗沉天空
++妖潮远景逼近，面部五官与@图片1参考图一致发丝分明，
+画面传达"暴风雨前的冷静"
+
+格2（上排中）：
+中近景腰部特写，剑仙低头目光看向腰间灵契玉佩，半透明
+翠绿玉佩悬于腰带上，玉佩内部一点赤色火光#E67E22忽然
+亮起从核心向表面蔓延，金橙光照亮周围银白袍面料纹理，
+剑仙面部下颌可见表情微变——眉微挑，背景暗化聚焦玉佩
+
+格3（上排右）：
+中景，玉佩光芒爆裂成金色粒子，从粒子中一只30厘米大小的
+小朱雀跌跌撞撞飞出，@图片7形态参考：柔软霞光橙色绒羽
+微微发光，翅膀扑腾不稳定忽高忽低，大圆琥珀色眼睛慌张
+四处看，嘴微张，背景为暗夜+妖潮远景逼近，小朱雀刚出
+世的慌乱可爱感
+
+格4（下排左）：
+中近景侧面，小朱雀悬浮半空面向画面左侧（看着冲来的妖
+潮方向），羽毛微炸强装镇定但眼中明显慌张，嘴大张像在
+喊叫"主人再不出手我们就真要被咬碎啦"，背景妖潮暗影
+虚化逼近，画面重点是朱雀的表情——强装镇定的可爱慌张
+
+格5（下排中）：
+中景低角仰拍，白发剑仙右手rapidly拔剑出鞘瞬间，剑身
+蓝光#4A90D9爆闪向外扩散环形冲击波1.5米，银白长袍袍摆
+被能量冲击向后甩起，白色长发向后炸开带蓝色微光，身后
+上方数十道蓝色飞剑开始凝聚扇形阵列每柄有独立蓝色能量
+尾迹，参考@图片3万剑归宗技能态的飞剑+剑气形态，表情
+从冷静转为双目微睁瞳中蓝光
+
+五格共享：暗夜大禹门石阶场景，格1-2冷峻安静→格3-4朱
+雀出场活泼→格5爆发释放，情绪从静到动的递进，朱雀暖橙
+色为暗场景中的暖色点缀
+
+negative prompt:
+卡通，二次元，明亮日光，模糊，文字标签，竖屏，单张，
+朱雀成年形态（格3-4必须是小型初生态）
+```
+
+---
+
+
+## SEG-04 · 灵狐出场+桃花法阵控场（7s · 5格·六宫格）
+
+**剧本对应段落：**
+> 就在妖潮逼近的一瞬间，漫天桃花忽然逆风而来。一名灵狐少女撑伞落在山门前。她身后狐尾虚影浮现，伞面展开，粉色法阵沿着地面迅速扩散，冲在最前方的妖物动作瞬间变慢。灵狐："我控住它们。""你来斩开这条路。"
+
+```
+宫格排列（六宫格·5格+1白）：
+[格1 桃花瓣逆风飘来][格2 灵狐撑伞从上降落][格3 着地伞触地法阵扩散]
+[格4 法阵内妖物冻结][格5 灵狐歪头说话表情][    白    ]
+
+景别切换：大全景 → 中全景 → 中景 → 中全景 → 中近景面部
 ```
 
 ```
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━
 【操作指引】
   垫图上传：@图片4 灵狐正面 + @图片6 岚花飞琼技能态 + @图片11 山门夜景
-  垫图权重：0.40-0.50（角色+法阵特效需高度还原）
+  垫图权重：0.40-0.50（灵狐角色+法阵特效高还原）
   工具模式：MJ --cref [@图片4] --cw 80 --sref [@图片11]
-           或 Flux img2img 上传@图片4主图·@图片6辅助
-  备注：三格灵狐同一朝向/服装/狐耳
-       法阵粉色#F8B4C8参考@图片6技能态的圆形法阵形态
-       格3需同时出现灵狐+冻结妖物·构图复杂可单独生成拼接
+  备注：所有格灵狐同朝向同服装同狐耳
+       格3-4法阵粉色#F8B4C8参考@图片6的圆形法阵形态
+       格5是台词表情格·灵狐面部需清晰
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ```
 
-**Nano Banana 提示词：**
+**提示词：**
 
 ```
 prompt:
-Game CG quality Chinese fantasy 3D animation storyboard,
-9:16 vertical, three-panel vertical layout 1px white lines equal
-thirds, night battle scene stone staircase, pink cherry blossom and
-warm gold accent against dark base, highly detailed:
+游戏CG级国风仙侠3D动画分镜板，16:9横幅画面，从左到右
+排列5格（上排3格+下排2格+1格纯白），电影级光影质感，
+高精度材质渲染，暗夜山门战场+桃粉控场：
 
-TOP PANEL (upper 33%):
-wide full shot entire staircase battlefield night, cherry blossom
-petals #F8B4C8 blowing in from right supernatural wind, fox-eared
-female character descending gracefully from upper-right holding ornate
-parasol one hand, parasol spinning petals drifting from edges, flowing
-pink white robes cherry blossom embroidery, fox ears pointed black hair
-trailing, dark creatures on stairs golden phoenix fire background,
-composition: character descending upper-right, petals filling air
+格1（上排左）：
+大全景，暗夜山门石阶战场妖潮逼近中，画面右侧突然飘入
+漫天逆向桃花瓣#F8B4C8，花瓣逆风从右向左飘动不合物理
+逻辑充满超自然感，每瓣花瓣微微发粉色荧光，黑暗战场中
+突然涌入一抹粉色温柔——与压迫的暗绿妖潮形成反差
 
-MIDDLE PANEL (middle 33%):
-medium shot fox-eared female landing elegant single-foot touchdown,
-parasol tip contacting ground, at contact point pink circular magic
-formation #F8B4C8 expanding outward reaching 2m radius, cherry-blossom
-rune patterns rotating glowing within circle, face clearly visible
-confident tilted head knowing half-smile, fox ears alert outfit sharp,
-composition: character center-frame moment of landing magic circle beneath
+格2（上排中）：
+中全景低角仰拍，灵狐少女从画面上方优雅降落中，@图片4
+形态参考：狐耳竖立黑发飘逸粉白飘逸长裙桃花刺绣，单手
+撑开华丽纸伞伞面旋转花瓣从伞沿飘出，身体微倾从容不迫，
+脚尚未着地悬于石阶上方1米处，背景为暗夜天空+远景妖潮
 
-BOTTOM PANEL (lower 33%):
-medium-full shot pulled back full 5m radius magic circle visible, pink
-formation fully expanded rotating rune patterns, petals spiraling
-upward from edges vortex, dark creatures FROZEN mid-motion pink binding
-threads around limbs, fox character center translucent fox tail shadow
-purple-pink glow, parasol on shoulder casually, composition: full
-circle frozen creatures character commanding center
+格3（上排右）：
+中景，灵狐单脚轻巧着地瞬间，伞尖触地接触点为中心粉色
+圆形法阵#F8B4C8迅速向外扩散至5米半径，法阵内桃花符文
+旋转发光参考@图片6技能态，花瓣从法阵边缘螺旋上升，
+灵狐居画面中央着地姿态优雅，面部可见自信微笑
 
-all panels: same character same direction throughout, progressive
-descend→land→control, pink #F8B4C8 primary accent dark #2C3E50 base,
-consistent design across panels, CG storyboard
+格4（下排左）：
+中全景后拉展示法阵全貌，粉色法阵5米范围内多只黑色妖物
+动作瞬间冻结——有的扑跳姿势凝固在半空有的奔跑姿势定住，
+粉色束缚能量线缠绕在它们四肢上，灵狐站于法阵中心身后
+半透明狐尾虚影浮现发紫粉光，伞靠在肩上从容
+
+格5（下排中）：
+中近景面部，灵狐微微歪头带着掌控全局的自信半笑，狐耳
+微动，嘴型微张说着"我控住它们·你来斩开这条路"，面部
+轮廓清晰五官精致与参考图一致，背景虚化为粉色花瓣飘散
++暗夜氛围，法阵底光从下方照亮面部下颌形成上冷下暖照明
+
+五格共享：同一暗夜石阶战场，灵狐从出场到控场完整过程，
+桃粉#F8B4C8为画面主要暖色点缀暗底#2C3E50，角色朝向
+全程一致不翻转
 
 negative prompt:
-direction flip, inconsistent design, no magic circle, cartoon, anime,
-sketch, text, daylight, male character, horizontal, blurry
+卡通，二次元，明亮日光，模糊，文字标签，竖屏，单张，
+男性角色，法阵颜色非粉色，朝向变化
 ```
 
 ---
 
 
-## SEG-06 · 三方合击（8s · 4格·2×2）
+## SEG-05 · 三方合击妖潮被逼退（8s · 6格·六宫格满）
+
+**剧本对应段落：**
+> 白发剑修不再犹豫，御剑而起。蓝色剑光划破妖雾，小朱雀振翅喷出离火，火焰缠上剑气，灵狐法阵在脚下绽放。三股力量在大禹门前汇聚。剑气落下，离火爆开，桃花法阵锁住妖潮。第一波妖物被硬生生逼退。
 
 ```
-宫格结构：2×2宫格排列（9:16竖屏）
-格1(左上) = T+0s 三人站位蓄力（中全景）
-格2(右上) = T+3s 三方能量同时射出（中景）
-格3(左下) = T+5s 三色命中爆裂（中景特效核心）
-格4(右下) = T+7s 冲击波清场·妖物消散（中全景）
-景别切换：中全景 → 中景 → 中景 → 中全景
+宫格排列（六宫格满·6格）：
+[格1 剑仙御剑而起][格2 小朱雀喷出离火][格3 灵狐法阵绽放]
+[格4 三股力量汇聚][格5 三色命中爆裂][格6 妖潮被逼退]
+
+景别切换：中景 → 中景 → 中景 → 中全景 → 中景特效 → 大全景
 ```
 
 ```
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━
 【操作指引】
-  垫图上传：@图片1 剑仙正面 + @图片3 万剑归宗技能态
-           + @图片4 灵狐正面 + @图片6 岚花飞琼技能态
-           + @图片8 朱雀觉醒火翼
-  垫图权重：0.35-0.40（多角色场景·权重适中避免某角色主导）
+  垫图上传：@图片1 剑仙 + @图片3 万剑归宗技能态
+           + @图片4 灵狐 + @图片6 岚花飞琼技能态
+           + @图片8 朱雀觉醒火翼（离火特效参考）
+  垫图权重：0.35-0.40（多角色·适中权重）
   工具模式：
-    推荐：分两次生成
-      第一次：@图片1+@图片4+@图片8 → 生成格1（三人站位）
-      第二次：@图片3+@图片6+@图片8 → 生成格2-4（技能释放）
-      拼图合成
-    或一次：MJ --cref [@图片3] --sref [@图片6] --cw 50
-  备注：本段是全片视觉高点·三色并存
-       蓝#4A90D9+金#E67E22+粉#F8B4C8三色各占相近比例
-       命中点白芯为最亮点
+    推荐分两次：
+      第一次：@图片1+@图片3 → 生成格1
+      第二次：@图片3+@图片6+@图片8 → 生成格4-5（合击）
+    或一次：MJ --sref [@图片3] [@图片6] --cw 50
+  备注：格4-5是视觉高点·三色并存
+       蓝#4A90D9+橙金#E67E22+粉#F8B4C8三色各占相近比例
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ```
 
-**Nano Banana 提示词：**
+**提示词：**
 
 ```
 prompt:
-Game CG quality Chinese fantasy 3D animation storyboard,
-9:16 vertical, four-panel 2x2 grid 1px white lines, reading order
-top-left→top-right→bottom-left→bottom-right, night staircase
-battle scene three-color attack sequence, highly detailed:
+游戏CG级国风仙侠3D动画分镜板，16:9横幅画面，从左到右
+排列6格满六宫格（上排3格+下排3格），电影级光影质感，
+高精度材质渲染，暗夜战场三方合击高燃：
 
-TOP-LEFT: medium-full shot three heroes formation on stone stairs
-night, white-haired sword immortal center silver-white robes right
-hand pointing forward blue swords behind, fox-eared female left pink
-parasol forward pink energy, golden phoenix above wings spread fire
-building in chest, dark creatures frozen ahead, three different energy
-colors beginning to surge forward simultaneously
+格1（上排左）：
+中景低角仰拍，白发剑仙御剑而起腾空，身体向前冲刺姿态
+右手持剑向前劈出，蓝色剑光#4A90D9划破前方暗绿妖雾，
+剑气弧线拖尾明亮，银白长袍后摆飞扬，表情决绝双目蓝光
 
-TOP-RIGHT: medium shot three attacks launching simultaneously, blue
-sword cone #4A90D9 50+ swords tight cone pattern individual trails,
-golden fire stream #E67E22 pouring from above wide beam, pink petal
-tidal surge #F8B4C8 rushing forward ground level flower tsunami, all
-three converging on same target area
+格2（上排中）：
+中景，小朱雀觉醒态振翅喷出离火，金橙色#E67E22火焰从
+喙中喷涌而出如火龙形态缠绕向前，火翼展开背后金色粒子
+升腾，火焰缠上前方蓝色剑气形成蓝金混合能量流
 
-BOTTOM-LEFT: medium shot impact point, triple-color prismatic explosion
-blue+gold+pink collision brilliant white-core burst expanding 3m, dark
-creatures disintegrating on contact dissolving dark particles, maximum
-brightness at convergence center overexposed bloom, sharp explosion edges
+格3（上排右）：
+中景，灵狐双手展伞粉色法阵#F8B4C8在脚下再次绽放扩大，
+桃花瓣潮从法阵边缘向前涌动如花海潮汐，狐尾虚影九尾
+雏形浮现，面部凝聚施法中嘴唇轻抿
 
-BOTTOM-RIGHT: medium-full shot pulled back wider aftermath, shockwave
-expanding outward clearing all creatures, three heroes hair/robes/wings
-blown backward from energy output, scorched ground between heroes and
-impact, ground cleared of all dark creatures, residual three-color
-energy particles dissipating
+格4（下排左）：
+中全景，三股力量在画面中心汇聚——蓝色剑气从左上，金色
+离火从上方，粉色花瓣潮从下方，三道不同色系能量同时向
+同一点涌动即将碰撞，三人分居画面三个方向各自释放
 
-all panels: same staircase location same night, progressive
-charge→launch→impact→aftermath, three colors balanced
-blue+gold+pink, professional CG storyboard
+格5（下排中）：
+中景特效核心，三色能量在命中点三棱镜爆裂#4A90D9+#E67E22
++#F8B4C8混合碰撞产生白色核心光球向外扩散3米，黑色妖物
+接触即崩解为暗色粒子，爆裂光芒为画面最亮点辉光溢出
+
+格6（下排右）：
+大全景后拉，冲击波从命中点向外扩散清扫妖潮，第一波妖物
+全部被逼退消散，大禹门石阶前方地面清空仅残留三色能量
+余迹，三人站位可见——剑仙居中灵狐左朱雀上方，短暂胜利
+
+六格共享：暗夜大禹门战场，三色能量蓝+金+粉为主要光源
+依次出现最终汇聚爆裂，从单人动作→汇聚→爆发→清场的
+完整战斗弧线，全片视觉高点
 
 negative prompt:
-single color only, calm scene, cartoon, anime, sketch, text,
-daylight, horizontal, inconsistent characters
+卡通，二次元，日光，模糊，单色，平静场景，文字，竖屏
 ```
 
 ---
 
-## SEG-07 · 相柳真身压下·毒雨倾泻（8s · 3格）
+
+## SEG-06 · 相柳真身压下+毒雨+防御崩坏（8s · 6格·六宫格满）
+
+**剧本对应段落：**
+> 可短暂的安静之后，天空忽然彻底黑了。桃花法阵开始被毒雨腐蚀。小朱雀的火焰被压低。白发剑修抬头，只见云层之上，九颗巨大的蛇首同时低垂下来。那不是虚影。是真正的相柳。相柳："区区凡修，也敢挡吾归墟之路？"
 
 ```
-宫格结构：上中下3格（9:16竖屏·各占33%）
-格1 = T+0.5s 九首真身突然压出（大全景仰拍）
-格2 = T+4s 毒雨从九口倾泻（中全景·毒雨覆盖）
-格3 = T+7s 三人防御崩坏艰难抵抗（中景）
-景别切换：大全景仰拍 → 中全景 → 中景
+宫格排列（六宫格满·6格）：
+[格1 短暂安静天空彻底黑][格2 九首真身同时压出][格3 主首低垂俯视近景]
+[格4 毒雨从九口倾泻][格5 法阵被腐蚀火焰被压][格6 三人渺小仰视]
+
+景别切换：大全景天空 → 大全景仰拍 → 中近景蛇首 → 中全景 → 中景地面 → 中全景人物
 ```
 
 ```
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━
 【操作指引】
-  垫图上传：@图片9 相柳九首压下 + @图片10 相柳主首特写
-  垫图权重：0.40-0.50（BOSS真身形态高度还原·这是标志镜头）
+  垫图上传：@图片9 相柳九首 + @图片10 相柳主首特写
+  垫图权重：0.40-0.50（BOSS标志镜头·形态高度还原）
   工具模式：MJ --cref [@图片9] --cw 80
-           或 Flux img2img @图片9为主图
-  备注：标志镜头#4·相柳形态还原度最重要
-       格1-2优先保证九首+猩红眼+湿润深绿鳞的细节
-       格3需要三人渺小身影作为体量对比参考
-       三人在格3仅占画面下15%·不需要高精度面部
+  备注：格2-3是标志镜头#4核心·相柳形态还原最重要
+       格3用@图片10主首特写作为面部细节参考
+       格5-6三人仅为远景渺小身影·不需面部细节
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ```
 
-**Nano Banana 提示词：**
+**提示词：**
 
 ```
 prompt:
-Game CG quality Chinese fantasy 3D animation storyboard,
-9:16 vertical, three-panel vertical layout 1px white lines equal
-thirds, pitch-black oppressive atmosphere BOSS pressure scene,
-highly detailed:
+游戏CG级国风仙侠3D动画分镜板，16:9横幅画面，从左到右
+排列6格满六宫格（上排3格+下排3格），电影级光影质感，
+高精度材质渲染，BOSS真身降临极度压迫：
 
-TOP PANEL (upper 33%):
-extreme low angle 85 degrees almost ground level looking straight up,
-nine REAL colossal serpent heads NOT shadows solid massive bodies
-simultaneously thrusting down from pitch-black clouds, each head 10x
-human scale, dark green-black scales #27AE60 low-saturation wet sheen
-each scale visible, crimson glowing eyes #C0392B all nine pairs blazing,
-main head lowest center others arranged dome canopy formation blocking
-entire sky, fangs elongated toxic liquid dripping, extreme oppressive
-vertical composition maximum size dominance
+格1（上排左）：
+大全景，短暂安静后天空completely彻底变为漆黑#1A1A1A，
+比之前更暗没有任何光源，大禹门山门剪影在极度黑暗中几乎
+不可见，仅石阶裂缝残留微弱绿光，死寂感——暴风雨前最后
+的静默，画面极暗极压迫
 
-MIDDLE PANEL (middle 33%):
-medium-full shot all nine mouths OPEN simultaneously releasing
-torrential dark green toxic rain #27AE60 pouring downward like nine
-poisonous waterfalls covering entire scene, toxic liquid cascading
-with acidic corrosion visual on everything below, the rain forms a
-dense curtain between upper serpent heads and lower ground, darkest
-green-black atmosphere
+格2（上排中）：
+大全景极低角仰拍85度贴地看天，九颗巨大蛇首@图片9从
+漆黑云层中simultaneously同时猛然压出——不是缓慢显现
+而是aggressive突然下压，实体非虚影，每颗蛇首深绿黑色
+鳞片#27AE60低饱和湿润反光每片鳞可辨，九对猩红双目
+#C0392B全部锁定地面，体量巨大每颗蛇首10倍人体尺度，
+穹顶笼罩式排列遮蔽整个天空
 
-BOTTOM PANEL (lower 33%):
-medium shot three tiny heroes at bottom struggling against toxic
-downpour, pink magic circle on ground cracking turning black under
-acid, golden phoenix flames flickering suppressed smaller, blue sword
-shield edges dissolving eaten away, three figures only 15% of frame
-impossibly small against the overwhelming force above, all three
-defense systems visibly failing simultaneously, extreme desperation
+格3（上排右）：
+中近景，相柳主首@图片10低垂至画面中心极近距离俯视，
+深绿黑色鳞片细节清晰湿润反光，猩红竖瞳双目#C0392B
+散发压迫红光，獠牙修长暗绿毒液挂滴，表情古老轻蔑威压，
+嘴微张正在说"区区凡修也敢挡吾归墟之路"，背景为其余
+八首远景虚化
 
-all panels: pitch-black #1A1A1A dominant, toxic green #27AE60 +
-crimson #C0392B only lights, maximum oppressive scale difference,
-BOSS overwhelms everything, professional CG storyboard
+格4（下排左）：
+中全景，九首simultaneously全部张嘴释放毒雨——暗绿色
+#27AE60毒液如九道瀑布从上方倾泻覆盖整个画面，毒雨
+密集如暴雨带有酸蚀腐蚀视觉效果，形成密集绿色幕帘
+
+格5（下排中）：
+中景地面，桃花法阵粉色#F8B4C8正在被毒雨腐蚀——法阵
+纹路开裂变黑崩坏，花瓣枯萎发黑，同时小朱雀金色火焰
+被毒雨压低闪烁变弱即将熄灭，剑仙蓝色护盾边缘被酸蚀
+溶解，三方防御全部同时崩坏中
+
+格6（下排右）：
+中全景，三人在毒雨倾泻中的渺小身影——剑仙灵狐朱雀仅
+占画面下方15%极其渺小，上方85%被九首真身+毒雨占据，
+极端的体量差对比传达绝望压迫感，但三人仍站立未倒
+
+六格共享：漆黑#1A1A1A底色+毒绿#27AE60+猩红#C0392B为
+唯一光源，几乎无暖色（正方三色被全面压制），BOSS真身
+的灭世级压迫感从显现→俯视→倾泻→崩坏→渺小，逐格升级
 
 negative prompt:
-bright colors, small creature, friendly, daylight, cartoon, anime,
-balanced power, heroes winning, text, horizontal, sketch
+明亮，友善，小体型怪物，英雄胜利，平衡对抗，卡通，
+二次元，日光，文字，竖屏
 ```
 
 ---
 
-## SEG-08 · 三人并肩·决意爆发（6s · 3格）
+
+## SEG-07 · 三人并肩决意+对撞定格（6s · 5格·六宫格）
+
+**剧本对应段落：**
+> 白发剑修、灵狐、小朱雀并肩站在大禹门前。小朱雀身后，一道巨大的朱雀火翼虚影缓缓展开。白发剑修握紧长剑。白发剑修："今日，我以此剑——守山门。"画面定格在剑光、离火、桃花法阵与相柳毒瘴即将对撞的一瞬间。
 
 ```
-宫格结构：上中下3格（9:16竖屏·各占33%）
-格1 = T+0s 毒雨中三人不倒·能量开始重燃（中景）
-格2 = T+3s 三方能量增强·虚影显现（中景）
-格3 = T+5s 保护罩成形·推退毒雨（中全景）
-景别切换：中景 → 中景（内容变化）→ 中全景（后拉展示气场）
+宫格排列（六宫格·5格+1白）：
+[格1 三人并肩站大禹门前][格2 朱雀火翼虚影展开][格3 剑仙握剑台词表情]
+[格4 三色上冲vs毒绿下压即将碰撞][格5 定格画面+字幕空间][    白    ]
+
+景别切换：中全景 → 中全景（朱雀高光）→ 中近景面部 → 全景对撞 → 定格全景
 ```
 
 ```
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━
 【操作指引】
-  垫图上传：@图片1 剑仙正面 + @图片3 万剑归宗技能态
-           + @图片4 灵狐正面 + @图片8 朱雀觉醒火翼
-  垫图权重：0.35-0.45（多角色情绪场景·面部需清晰）
-  工具模式：MJ --cref [@图片1] --cw 60（剑仙居中主导）
-           辅助 --sref [@图片3]（剑气参考）
-  备注：本段是情绪转折点·表情是重点
-       剑仙面部牙关紧咬+双目直视需清晰
-       三色能量从微弱→重燃→形成保护罩的渐变过程
-       格3朱雀身后巨大凤凰虚影参考@图片8形态放大
+  垫图上传：@图片1 剑仙 + @图片3 万剑归宗技能态
+           + @图片4 灵狐 + @图片8 朱雀觉醒火翼
+           + @图片9 相柳九首
+  垫图权重：0.35-0.40（最终定格需要所有元素并存）
+  工具模式：
+    推荐分格生成：
+      格1-3：@图片1+@图片4+@图片8 → 三人+火翼+表情
+      格4-5：@图片3+@图片8+@图片9 → 三色vs毒绿对撞定格
+  备注：格5是最终定格画面·所有能量悬停不运动
+       格5下方20%需保持干净暗底用于字幕叠加
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ```
 
-**Nano Banana 提示词：**
+**提示词：**
 
 ```
 prompt:
-Game CG quality Chinese fantasy 3D animation storyboard,
-9:16 vertical, three-panel vertical layout 1px white lines equal
-thirds, toxic rain atmosphere three heroes refusing to fall energy
-rebuilding, highly detailed:
+游戏CG级国风仙侠3D动画分镜板，16:9横幅画面，从左到右
+排列5格（上排3格+下排2格+1格纯白），电影级光影质感，
+高精度材质渲染，决意+终极定格：
 
-TOP PANEL (upper 33%):
-medium shot three heroes standing firm in toxic green rain, sword
-immortal center gripping sword both hands blade blue glow #4A90D9
-beginning to intensify from dim, jaw clenched eyes staring upward
-defiant, fox character left side reforming stance fox tail growing,
-phoenix above wings spread fire rebuilding, all three refusing to
-fall despite overwhelming pressure, dark toxic atmosphere around them,
-faces showing absolute determination not fear
+格1（上排左）：
+中全景平视，白发剑仙居中灵狐在左侧小朱雀在上方，三人
+并肩站在大禹门石阶前面向前方（面向相柳方向），毒雨中
+但三人能量形成保护罩抵挡，剑仙双手握剑蓝光重燃，灵狐
+伞在手法阵微光，朱雀火翼展开，决意坚定的三人站姿
 
-MIDDLE PANEL (middle 33%):
-medium shot same three heroes energy INTENSIFYING, sword blade now
-blazing bright blue energy spreading to hands as veins, fox tail
-splitting into nine-tail phantom formation purple-pink #F8B4C8
-intensifying, enormous translucent golden-white phoenix phantom
-emerging behind small phoenix 3m+ wingspan, all three energy colors
-growing stronger than before, toxic mist beginning to be pushed back
-in their immediate vicinity
+格2（上排中）：
+中全景，小朱雀身后巨大的金白色朱雀火翼虚影#E67E22→
+金白缓缓展开，虚影翼展3米以上占据画面上半部，半透明
+如神灵显圣，小朱雀实体在中心被虚影包裹，金色粒子如
+火羽向上升腾，地面被虚影照亮温暖金光与毒绿形成对抗
 
-BOTTOM PANEL (lower 33%):
-medium-full shot pulled back, three heroes combined three-color aura
-forming visible protective dome 3m radius, dome surface visible where
-toxic rain impacts and deflects outward, inside dome clear and bright
-outside dome dark toxic, three heroes united within dome faces forward,
-sword immortal center speaking mouth open determined expression,
-composition showing the dome of resistance against overwhelming dark
+格3（上排右）：
+中近景面部，白发剑仙面部特写，双手握紧长剑剑身在面前
+蓝白光芒强烈，面部jaw clenched牙关紧咬但不是恐惧是决
+意，双目正视前方蓝光在瞳中闪烁，嘴型微张正在说"今日
+我以此剑——守山门"，发丝被能量风压微微后扬，面部特征
+与@图片1完全一致
 
-all panels: same three heroes same positions progressive energy buildup,
-three colors #4A90D9+#E67E22+#F8B4C8 reclaiming dominance from toxic
-green, emotional turning point, CG storyboard quality
+格4（下排左）：
+全景，终极对撞构图——画面下方三人释放三色能量向上冲出
+（蓝色剑群上冲+金色离火上涌+粉色花瓣潮上升），画面
+上方相柳九首毒绿瘴气同时向下倾泻，三色暖光上升vs一色
+毒绿冷光下压在画面中心即将碰撞——距离收缩至最后0.5米
+的张力瞬间
 
-negative prompt:
-heroes falling, defeated posture, single character, calm scene,
-cartoon, anime, sketch, text, daylight, horizontal
-```
+格5（下排中）：
+全景定格，THE FRAME FROZEN画面完全定格——所有能量运动
+悬停在碰撞前0.1秒，蓝色剑群轨迹冻结上升中粉色花瓣悬
+停半空金色火流凝固上冲毒绿液流凝固下坠，所有粒子悬停
+不动，中心碰撞点白色高光最亮，画面成为完美静止画，
+画面下方20%保持相对干净暗色#1A1A1A→#2C3E50渐变用于
+后期字幕叠加"《**劫》第一劫：相柳降临"
 
----
-
-## SEG-09 · 对撞定格·片名转化（4s · 2格）
-
-```
-宫格结构：上下2格（9:16竖屏·上60%下40%）
-格1(上60%) = T+2s 三色能量上冲vs毒流下压即将碰撞（全景·主画面）
-格2(下40%) = T+3.5s 定格瞬间+片名字幕空间（干净暗底）
-景别切换：全景动态 → 定格静画+字幕区
-```
-
-```
-━━━━━━━━━━━━━━━━━━━━━━━━━━━
-【操作指引】
-  垫图上传：@图片3 万剑归宗技能态 + @图片8 朱雀觉醒
-           + @图片9 相柳九首压下
-  垫图权重：0.30-0.35（定格构图由提示词主导·参考图仅供形态参考）
-  工具模式：Flux img2img 或 MJ --sref [@图片9] --cw 40
-  备注：这是最终定格画面·要求所有能量轨迹"悬停"不运动
-       下方40%需要保持相对干净暗色用于后期叠加字幕
-       整体构图为上下对称：暖色上冲vs冷毒下压·中心碰撞白芯
-━━━━━━━━━━━━━━━━━━━━━━━━━━━
-```
-
-**Nano Banana 提示词：**
-
-```
-prompt:
-Game CG quality Chinese fantasy 3D animation storyboard,
-9:16 vertical, two-panel vertical layout upper panel 60% lower panel
-40% separated by 1px white line, FROZEN MOMENT maximum tension
-composition, highly detailed:
-
-UPPER PANEL (upper 60%):
-epic full shot THE FRAME IS FROZEN all motion suspended in time,
-three-color heroic energy rising UPWARD: blue sword trails #4A90D9
-ascending frozen mid-flight, pink petal wave #F8B4C8 rising frozen
-mid-surge, golden fire stream #E67E22 ascending frozen, versus from
-above: nine serpent heads dark green toxic breath #27AE60 pouring
-DOWNWARD frozen, all particles suspended motionless in air, convergence
-point at center where three-color rising meets toxic descending is
-brightest white-hot overexposed, absolute stillness maximum visual
-tension 0.1 second before ultimate collision, sword immortal visible
-small below with hundred swords launched, fox character nine-tail
-phantom visible, phoenix phantom wings spread
-
-LOWER PANEL (lower 40%):
-clean dark space mostly #1A1A1A to #2C3E50 gradient, minimal content
-only faint residual energy glow at top edge transitioning from upper
-panel, this space reserved for title text overlay, kept deliberately
-clean and simple dark tone for maximum text readability, subtle
-ground-level energy reflections only
-
-both panels: frozen moment still image quality, upper panel maximum
-visual density and tension, lower panel clean for text, professional
-CG storyboard final frame composition
+五格共享：从并肩决意→虚影觉醒→台词表情→对撞构图→
+定格瞬间，情绪从决意到爆发到悬停最大张力，最终画面是
+全片最强定格帧
 
 negative prompt:
-motion blur, movement, animated feel, bright lower panel, busy lower
-panel, text already present, cartoon, anime, sketch, horizontal,
-single panel, calm scene
+运动模糊（格5必须完全静止），平静场景，英雄已胜利，
+单人，卡通，二次元，日光，文字已叠加，竖屏
 ```
 
 ---
 
 ## 交付总览
 
-| SEG | 宫格数 | 垫图 | 核心重点 |
-|---|---|---|---|
-| 01 | 2格 | @图片11 | 纯场景·天空→地面 |
-| 02 | 3格 | @图片1+3+11 | 剑仙+万剑归宗技能态 |
-| 03 | 3格 | @图片9+10+12 | 相柳九首+妖潮 |
-| 04 | 4格 | @图片1+7+8 | 朱雀变身渐变过程 |
-| 05 | 3格 | @图片4+6+11 | 灵狐+桃花法阵技能态 |
-| 06 | 4格 | @图片1+3+4+6+8 | 三方合击·三色并存 |
-| 07 | 3格 | @图片9+10 | 相柳真身标志镜头 |
-| 08 | 3格 | @图片1+3+4+8 | 情绪转折·能量重燃 |
-| 09 | 2格 | @图片3+8+9 | 终极定格·字幕空间 |
+| SEG | 格数 | 宫格类型 | 垫图 | 剧本对应 |
+|---|---|---|---|---|
+| 01 | 4格 | 六宫格(4+2白) | @图片1+11 | 山门建置→天暗→妖星坠 |
+| 02 | 5格 | 六宫格(5+1白) | @图片9+11+12 | 封印裂→弟子恐→蛇影→妖潮 |
+| 03 | 5格 | 六宫格(5+1白) | @图片1+3+7 | 剑震→玉佩→朱雀出→拔剑 |
+| 04 | 5格 | 六宫格(5+1白) | @图片4+6+11 | 桃花来→灵狐降→法阵控场 |
+| 05 | 6格 | 六宫格满 | @图片1+3+4+6+8 | 三方各自攻击→汇聚→爆裂→清场 |
+| 06 | 6格 | 六宫格满 | @图片9+10 | 天黑→真身压→毒雨→防御崩 |
+| 07 | 5格 | 六宫格(5+1白) | @图片1+3+4+8+9 | 并肩→火翼→台词→对撞→定格 |
+
+**总计：7张宫格分镜图 · 38格关键帧 · 严格对应剧本全文**
 
 ---
 
 ## 使用流程
 
 ```
-【完整执行流程】
-═══════════════════════════════════════════════════════
-① 按操作指引上传对应垫图 + 粘贴提示词 → 生成宫格分镜图
-② 检查：朝向一致？色调统一？景别流畅？格间连贯？
-③ 满意后将宫格图作为 style_reference 上传 Seedance
-④ 配合 STEP5 时间轴连贯描述粘贴提示词框
-⑤ Seedance 出片（宫格图锁视觉+文字锁动态=双重约束）
-═══════════════════════════════════════════════════════
+① 按操作指引上传垫图 + 粘贴中文提示词 → Nano Banana生成宫格图
+② 检查：朝向一致？色调统一？景别流畅？剧情对应？
+③ 将宫格图作为style_reference上传Seedance
+④ 配合STEP5时间轴连贯描述投喂Seedance提示词框
+⑤ 出片
 ```
 
 ---
 
-*全9条宫格分镜图提示词交付完毕*
+*全7条宫格分镜图提示词·严格对应剧本·中文·16:9横幅·左到右排列·交付完毕*
