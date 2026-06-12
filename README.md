@@ -39,6 +39,14 @@
 - 国漫风格优化建议
 - 实际项目经验分享
 
+## 📊 项目示例
+
+![AI 3D 国漫短剧工作流示意图](images/截屏2026-06-12 09.41.50)
+
+![短剧生成示例](images/example-scene.png)
+![AI 3D 国漫短剧工作流示意图](images/截屏2026-06-12 09.44.34)
+
+![短剧生成示例](images/example-scene.png)
 ---
 
 **维护者**：@userlijlijunjie-collab  
