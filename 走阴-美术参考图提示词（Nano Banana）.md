@@ -1,411 +1,373 @@
-# 《走阴》美术参考图提示词（Nano Banana / Flux / MidJourney）
+# 《走阴》美术参考图提示词（Nano Banana）· 纯苗巫定稿版
 
-> ★ 本文档产出的所有参考图将作为 Seedance 2.0 的 @图片N 绑定
-> ★ 后续所有分镜必须严格按照这些特征和空间关系执行
-> ★ 工具：Nano Banana（Flux / MidJourney）
-
----
-
-## 一、角色参考图 · 阿青（5张 · 强制三视图）
-
-### 图1 · 角色正面标准图（1:1 · 脸部一致性锚定）
-
-```
-prompt:
-Chinese 3D animation character portrait, eastern gothic dark style, 
-a young woman named Aqing, front-facing half-body shot, 
-pale skin with cold undertone, cinnabar-red sealed eyes (both eye sockets sealed with vermillion cinnabar paste creating smooth red surface where eyes should be), 
-long black hair reaching waist with clear layered strands, 
-silver armor-scale skirt (鱼鳞甲裙) visible at collar and shoulders, each scale piece individually defined with fine engraved talisman patterns,
-dark inner robe beneath armor scales,
-silver hairpin inserted in hair bun at the back,
-facial expression: slightly disgusted frown with corners of mouth turned down,
-hard lighting from left side creating strong contrast on silver armor,
-dark indigo background,
-highly detailed 3D render, sharp facial features, clean jawline,
-no smile, cold demeanor, professional character design reference sheet style
-
-negative prompt:
-cartoon, anime cel shading, pixar style, bright colors, warm tones, cute, chibi, deformed face, blurry, low quality, pink, pastel colors
-```
-
-**用途**：脸部五官/朱砂封眼/发型/肤色锚定 · 所有镜头面部一致性基准
+> **IP Bible 调取确认**：⓪~⑥ 全部锁定 ✓
+> **版本**：v2.2 纯苗巫定稿版 · 2026-05-15
+> **工具**：Nano Banana（Flux / MidJourney）
+> **用途**：产出 Seedance 2.0 所需的 @图片N 参考图
 
 ---
 
-### 图2 · 三视图·正面全身（3:4 · 体型一致性）
+## A-1 · 阿青角色参考图（5 张）
+
+### 图 1 · 正面标准图（1:1 · 脸部一致性锚定）
 
 ```
-prompt:
-Chinese 3D animation character design, full body front view, T-pose reference sheet,
-eastern gothic dark style female character Aqing,
-height: tall and slender, long-limbed proportions,
-outfit from top to bottom:
-- cinnabar-sealed eyes (vermillion red smooth surface covering both eye sockets)
-- long black hair to waist, layered and flowing
-- dark inner robe with wide sleeves
-- silver fish-scale armor skirt (银甲片裙) covering torso and hips, each individual scale piece visible with engraved soul-guiding talisman patterns
-- armor scales are ancient silver color (#8E9AAF) with hard specular highlights
-- dark fabric skirt beneath armor extending to ankles
-- dark boots
-accessories:
-- silver hairpin in hair
-- yellow talisman papers tucked at waist belt
-- right hand holding charred black peachwood staff (焦黑桃木杖), staff top has a small inverted hanging silver puppet figurine
-overall color palette: ancient silver + charcoal black + vermillion cinnabar red accents only at sealed eyes,
-neutral grey background, professional character turnaround reference,
-highly detailed 3D model, clean silhouette, no background elements
+【Nano Banana Prompt · 图 1】
+Eastern gothic semi-realistic 3D animation character portrait,
+close-up face shot, young woman "Ah Qing" the Yin-walker,
+split-colored center-parted hair one side ink-black one side
+silver-white with wispy natural strands, small silver hair ornaments
+and red tassels scattered in hair, EYES CLOSED with horizontal
+blood-stain mark across both eyes like a sealing sigil, blood mark
+naturally blurred edges slightly dripping downward, NO lip piercings
+NO facial stitches NO metal objects on face, deathly pale complexion,
+delicate refined features, expression languid cold slightly disdainful,
+aura ethereal chilling hauntingly beautiful restrained,
+upper outfit visible in indigo-blue and dark-red with minimal silver
+ornaments coffin-shaped talisman plate and red cord details,
+background simple cold grey with light fog atmosphere,
+realistic material textures hyperdetailed skin, 3D render cinematic
 
-negative prompt:
-cartoon, anime, pixar, bright colors, pink, cute, chibi, blurry, low quality, busy background, multiple characters
+Negative: open eyes, heavy armor, bright colors, cute, smiling,
+          lip piercings, facial stitches, metal on face, anime style
 ```
 
-**用途**：全身比例/服饰全貌/配饰位置/武器持握方式锚定
-
----
-
-### 图3 · 三视图·侧面正侧90°（3:4 · 朝向一致性）
+### 图 2 · 三视图正面（3:4 · 全身比例锚定）
 
 ```
-prompt:
-Chinese 3D animation character design, full body perfect side view (90 degrees profile),
-eastern gothic dark style female character Aqing,
-profile silhouette clearly showing:
-- head profile with cinnabar-sealed eye socket visible from side (smooth red surface)
-- nose bridge and chin line sharp and defined
-- long black hair flowing down the back to waist
-- silver fish-scale armor skirt profile showing layered scales
-- charred black peachwood staff held in right hand dragging on ground behind
-- staff top silver puppet figurine hanging inverted
-- wide sleeves of inner robe visible from side
-- silver hairpin protruding from hair bun
-body posture: slightly slouched lazy stance, weight shifted back,
-neutral grey background, professional character side-view reference sheet,
-highly detailed 3D render, clean profile silhouette
+【Nano Banana Prompt · 图 2】
+Eastern gothic semi-realistic 3D animation character full-body
+front view reference sheet, young woman standing straight,
+split-colored center-parted hair reaching mid-back one side ink-black
+one side silver-white, small silver ornaments and red tassels in hair,
+eyes closed with horizontal blood-stain sealing mark across eye area,
+wearing sleek indigo-blue and dark-red outfit clean-cut design,
+minimal silver accessories, coffin-shaped talisman plate hanging
+from red cord at chest, red cord wrapping details on wrists,
+silver boots, holding maple wood staff (枫木角杖) in right hand
+with silver Miao-dragon head at top containing bone bell,
+white membrane lantern hanging from staff, T-pose reference,
+neutral grey background, full body head to toe visible,
+3D character design sheet style
 
-negative prompt:
-front view, three-quarter view, cartoon, anime, bright colors, blurry, multiple angles in one image
+Negative: dynamic pose, heavy armor, crown, background scenery
 ```
 
-**用途**：侧面轮廓/朝向锁定基准 · 防止 Seedance 生成时左右翻转
-
----
-
-### 图4 · 三视图·45°四分之三视角（3:4 · 常用分镜角度锚定）
+### 图 3 · 三视图侧面 90°（3:4 · 朝向一致性锚定）
 
 ```
-prompt:
-Chinese 3D animation character design, three-quarter view (45 degree angle),
-eastern gothic dark style female character Aqing in dynamic lazy pose,
-slightly leaning back with one hand dragging charred peachwood staff on ground,
-head tilted to one side with disgusted frown expression,
-cinnabar-sealed eyes clearly visible at this angle,
-silver fish-scale armor skirt catching hard side light showing individual scale details and engraved patterns,
-long black hair draped over one shoulder flowing naturally,
-wide dark sleeves showing layered fabric texture,
-yellow talisman paper partially visible tucked at waist,
-silver hairpin glinting in hair,
-overall feeling: lazy, elegant, dangerous, disgusted by everything around her,
-dark moody lighting from upper left, strong contrast,
-neutral dark background, professional character design reference,
-highly detailed 3D render, fabric simulation quality
+【Nano Banana Prompt · 图 3】
+Eastern gothic semi-realistic 3D animation character full-body
+pure side view 90 degrees profile, young woman silhouette showing
+split-colored hair clearly (viewer-facing side shows transition
+from black to white at center part), sleek indigo outfit profile
+showing clean silhouette without bulky armor, red cord details
+visible at waist and wrist, coffin talisman hanging at chest side view,
+maple wood staff held vertically showing silver dragon head profile,
+bone bell silhouette, silver boot side view with slight hover gap,
+neutral grey background, character design reference, clean readable
+silhouette, 3D render
 
-negative prompt:
-cartoon, anime, pixar, bright happy expression, action pose, blurry, low quality, warm colors
+Negative: front view, dynamic, 3/4 angle, heavy armor
 ```
 
-**用途**：45°动态姿态/服装层次展示 · 最常用分镜角度锚定
-
----
-
-### 图5 · 动态/气场状态图（3:4 · 动态一致性锚点）
+### 图 4 · 三视图 45° 四分之三视角（3:4 · 常用分镜角度锚定）
 
 ```
-prompt:
-Chinese 3D animation character action pose, eastern gothic dark style,
-female character Aqing in combat-ready state,
-peachwood staff held horizontally bitten between teeth (横咬桃木杖),
-left hand forming a one-handed seal gesture (单手结印),
-silver armor scales on her back standing up like knife blades (银甲片如刀片般竖起),
-cinnabar-sealed eyes with faint cracks beginning to show,
-faint dark energy aura surrounding her body in indigo-black color,
-long black hair lifted slightly by supernatural wind,
-silver armor scales glowing with cold spectral light at edges,
-red threads (朱砂红线) barely visible emerging from sleeve edges,
-expression: tilted head with lazy smirk despite combat stance,
-dark atmospheric lighting, volumetric light from above,
-indigo-dark background with faint ghost banner silhouettes,
-highly detailed 3D render, particle effects at armor edges
+【Nano Banana Prompt · 图 4】
+Eastern gothic semi-realistic 3D animation character 3/4 view,
+slight combat-ready stance tilted head, young woman with split
+black-white hair flowing dynamically, eyes closed blood-stain mark
+visible from this angle, left hand with five fingers spread like fan
+joints locked (封山指 pose), right hand gripping maple staff planted,
+indigo-blue and dark-red outfit mid-movement showing fabric flow,
+red tassels in hair swaying, coffin talisman swinging slightly,
+dramatic side lighting creating harsh highlights on silver accessories,
+dark atmospheric background with cold grey fog, 3D character reference
 
-negative prompt:
-cartoon, anime, bright colors, cute expression, peaceful pose, blurry, low quality, golden light, holy light
+Negative: flat, front-only, heavy armor, open eyes in normal state
 ```
 
-**用途**：战斗预备/气场状态/能量光效色系锚定 · 动态镜头一致性参考
+### 图 5 · 动态/气场状态图（3:4 · 觉醒态锚定）
 
----
-
-## 二、道具白底图
-
-### PROP-01 · 焦黑桃木杖（激活/未激活两态）
-
-**未激活态：**
 ```
-prompt:
-product photography style, single object on pure white background,
-a charred black peachwood staff (焦黑桃木杖), traditional Chinese occult weapon,
-staff length approximately 1.5 meters, surface is charred black with visible wood grain texture beneath,
-staff top features a small silver puppet figurine hanging upside-down (倒吊银质小人偶) by a thin silver chain,
-the figurine is in human shape with simplified features, arms dangling downward,
-staff body has subtle carved talisman characters barely visible under the char,
-bottom tip slightly worn from dragging on ground,
-overall color: charcoal black (#1A1A1A) with subtle dark wood grain,
-silver figurine color: ancient silver (#8E9AAF),
-clean white background, professional prop reference sheet, multiple angles showing front and side,
-highly detailed 3D render, sharp focus on texture details
+【Nano Banana Prompt · 图 5】
+Eastern gothic semi-realistic 3D animation character AWAKENED state,
+young woman floating slightly, blood-stain mark on eyes CRACKED OPEN
+like splitting seal revealing rotating dark void (黑洞) of swarming
+insects where eyes should be, dark red gu-markings NOW VISIBLE
+emerging from beneath skin across neck arms and exposed areas,
+four human-skin banners (引魂幡) erupting from spine area billowing
+behind with thousands of tiny mouths on surface, split black-white
+hair floating with golden (#D4A017) energy highlights on white side,
+indigo outfit now with glowing red-gold cracks along seams where
+gu-markings show through fabric, overall: ethereal horror meets
+divine golden power, strong contrast golden glow vs dark void,
+3D render dramatic lighting
 
-negative prompt:
-hands holding, character, busy background, colorful, glowing, bright, blurry
-```
-
-**激活态（黑血涂抹后）：**
-```
-prompt:
-product photography style, single object on pure white background,
-a charred black peachwood staff in activated state,
-same staff as above but now with black ink-like blood (黑血) smeared on the staff top near the silver figurine,
-the black blood has a wet glossy sheen like fresh Chinese ink,
-a yellow talisman paper (黄符) is wrapped around the staff top area where blood was applied,
-talisman paper has red cinnabar characters written on it,
-the silver puppet figurine is now faintly glowing with a cold indigo-blue light at its joints,
-faint dark energy wisps rising from the blood-smeared area,
-staff body remains charred black,
-clean white background, professional prop reference, 
-highly detailed 3D render
-
-negative prompt:
-hands, character, busy background, bright golden light, cheerful, blurry
+Negative: cute, peaceful, normal closed eyes, no markings visible
 ```
 
 ---
 
-### PROP-02 · 银簪（激活/未激活两态）
+## A-2 · 道具/法器白底图
 
-**未激活态：**
+### PROP-01 · 枫木角杖（含银苗龙+骨铃+白灯笼）
+
 ```
-prompt:
-product photography style, single object on pure white background,
-a traditional Chinese silver hairpin (银簪), elegant and deadly,
-overall length approximately 15cm, slender pointed tip tapering to needle-sharp point,
-head of hairpin features a minimalist design: a tiny inverted soul-guiding banner (引魂幡) motif,
-surface is ancient silver color (#8E9AAF) with subtle patina,
-faint engraved talisman lines running along the shaft,
-the pin is slightly curved following traditional Chinese hairpin form,
-clean white background, professional jewelry/weapon prop reference,
-highly detailed 3D render, metallic reflection, sharp focus
+【Nano Banana Prompt · PROP-01 未激活态】
+Product photography style white background, Chinese fantasy weapon,
+maple wood staff (枫木角杖) approximately 1.5m length,
+wood grain visible warm brown tone, top section features intricately
+carved silver Miao-dragon (银苗龙) wrapping around staff head,
+dragon scales individually detailed with micro-etching,
+dragon mouth holding a small bone bell (骨铃) made from half
+a finger bone as bell tongue, hanging white membrane lantern
+(白灯笼) from staff hook with fetal membrane texture translucent
+showing curled infant silhouette inside, staff body has faint
+insect-etched rune patterns (虫蚀纹) barely visible when inactive,
+clean white background, product shot, multiple angles, 3D render
 
-negative prompt:
-gold, colorful gems, ornate decorations, flowers, busy background, blurry, hands
+Negative: person holding it, background scenery, glowing, activated
 ```
 
-**激活态（投掷命中后）：**
 ```
-prompt:
-product photography style on white background,
-the same silver hairpin now embedded point-first into a surface (shown from side angle),
-upon impact: faint cinnabar-red energy lines (朱砂红线) extending outward from the point of insertion in a web pattern,
-the hairpin head glows faintly with cold silver-blue light,
-dark energy wisps curl around the shaft,
-red thread-like energy radiating outward from insertion point,
-clean white background with the embedding surface shown minimally,
-highly detailed 3D render, dramatic lighting on the metal surface
+【Nano Banana Prompt · PROP-01 激活态】
+Same staff as above but ACTIVATED state: silver dragon eyes glowing
+with internal warm light source, dragon scales have micro-movement
+shimmer, bone bell resonating with visible sound absorption effect
+(surrounding air distorting inward toward bell), insect-etched runes
+on staff body now glowing dark red after blood contact, faint
+bioluminescent green at base where staff contacts dark soil (阴壤),
+white lantern interior glow slightly brighter revealing infant
+silhouette more clearly, overall mood: ominous activated magical weapon,
+white background with subtle atmospheric haze, 3D render
 
-negative prompt:
-gold, warm colors, cheerful, blurry, cartoon, full character
+Negative: deactivated, dull, no glow
+```
+
+### PROP-02 · 蛊皮（银镯内侧·未激活/激活两态）
+
+```
+【Nano Banana Prompt · PROP-02】
+Product photography white background, two states side by side:
+LEFT: dried gu-skin (蛊皮) ultra-thin brittle translucent membrane
+with insect-etched rune patterns (虫蚀纹) visible as carved channels,
+attached to inner surface of silver Miao bracelet (银镯),
+texture like dried insect wing membrane, pale cream color;
+RIGHT: same gu-skin ACTIVATED after blood contact, softened swollen
+organic pulsating texture, runes now glowing dark red, membrane
+surface undulating like living tissue, edges curling with moisture,
+semi-transparent showing internal structure, 3D product render
+
+Negative: person wearing it, background, large size
+```
+
+### PROP-03 · 断指+银指套+蛊虫红线
+
+```
+【Nano Banana Prompt · PROP-03】
+Product photography white background, horror prop detail:
+severed human finger wearing ornate silver finger-cap (银指套)
+covered in dense gu-marking engravings, finger stump showing
+black blood defying gravity climbing upward with tiny silver
+insects swimming inside blood stream, connected to a red thread
+that is NOT thread but translucent gu-insect secretion (半透明黏液)
+with visible insect shadows moving inside like blood vessels,
+finger has subtle twitching muscle memory pose, overall unsettling
+biological horror aesthetic, macro photography style, 3D render
+
+Negative: clean, normal finger, no horror elements
 ```
 
 ---
 
-### PROP-03 · 红布包裹断指聘礼
+## B · 特效风格板
+
+### 色彩三级分级
 
 ```
-prompt:
-product photography style, single object on pure white background,
-a small bundle wrapped in faded red cloth (红布包), traditional Chinese style wrapping,
-the cloth is partially opened revealing contents:
-a single withered blackened female finger wearing an ornate silver finger-cap (银指套) with fine engravings,
-an extremely thin red thread (极细红线) is tied around the finger extending outward and trailing off,
-the finger is dried and darkened like preserved remains,
-the red cloth is aged and slightly faded, traditional wedding-red color now darkened,
-faint ominous dark-red glow emanating from the finger,
-clean white background, professional prop reference,
-highly detailed 3D render, texture focus on aged cloth and dried remains
+【特效风格板 · 色彩三级分级】
+═══════════════════════════════════════════════════════
+级别 1：主色系（全片锁死·来自 IP Bible ① 主色池）
+  · 阿青能量核心色：暗红 #6B1A1A（蛊纹常态）→ 金色 #D4A017（觉醒态）
+  · 邪祟能量色：惨白 #E8E0D4 + 暗红 #6B1A1A
+  · 势力标志色：
+    走阴人 = 银灰 #A8B0B8 + 暗红蛊纹
+    邪祟 = 惨白 + 蛹乳白 #F5F0E8
+  · 全片锁定·不参与多样性去重
 
-negative prompt:
-fresh, bloody gore, bright red, cheerful, cartoon, blurry, full character
+级别 2：变化层（参与多样性去重）
+  · 辅色池：蝎褐/蛇青/蜈蚣紫/壁虎灰/蟾蜍黄（五毒蛊丝专用）
+  · 粒子质感池：生物荧光/金属反光/半透明SSS/黏液折射
+  · 扩散形态池：环形编织/锥形射出/球形内收/涟漪扩散/裂缝蔓延
+  · 规则：连续最多 2 个镜头可相同，第 3 个必须切换
+
+级别 3：环境色（跟随场景变化）
+  · 暗巷常态：墨黑 #1A1A1A + 菌丝绿 #3D5E3A 荧光点
+  · 阴司道场：金色 #D4A017 羊水光 + 暗红血管脉动
+  · 收束后：冷暗回归 4200K + 蛊卵金色微光残留
+═══════════════════════════════════════════════════════
+```
+
+### 特效约束方法论（本项目执行版）
+
+```
+【特效约束 · 本项目锁定】
+═══════════════════════════════════════════════════════
+(1) 特效本体设计：苗巫生物恐怖
+  · 所有特效必须是"活的"（蠕动/生长/分裂/寄生/吞噬）
+  · 禁止无机特效（光柱/魔法阵/符文发光/能量球等传统仙侠特效）
+  · 特效边缘必须有生物质感（蛊虫爬动/黏液拉丝/菌丝延伸）
+
+(2) 特效运动轨迹强约束
+  · 必须明确起点（从身体哪个部位/哪个蛊纹生长出）
+  · 必须明确路径（直线射出/环形编织/分裂扩散/向内收缩）
+  · 必须明确终点（附着目标/融入地面/回收体内/消散为蛊卵）
+  · 必须明确生命周期：爆发(生长)→扩散(蔓延)→消散(回收或硬化)
+
+(3) 单镜头特效数量铁律：≤2 种独立特效
+  · "主+辅+反馈"= 1 种特效的三层，不是 3 种
+  · 同镜头 2 种以上独立特效 → 强制拆段
+
+(4) prompt 强约束写法
+  ❌ 错误：特效华丽 / 能量爆发 / 气势磅礴
+  ✅ 正确：[VFX: 具体生物形态 + 具体颜色 + 具体运动方向 +
+           具体范围 + "clear edges not blocking subject"]
+═══════════════════════════════════════════════════════
 ```
 
 ---
 
-## 三、场景基准图
+## C · 场景基准图
 
-### SCENE-01 · 暗巷全景（邪祟场域 · 日常态）
+### 场景 1 · 破败暗巷（本集主场景·邪祟领地）
 
 ```
-prompt:
-Chinese 3D animation environment concept art, eastern gothic dark horror style,
-a narrow dark alley at night in an old Chinese town,
-16:9 widescreen cinematic composition,
-perspective: looking down the alley from one end toward a dead-end wall,
+【Nano Banana Prompt · 场景 1 · 常态（夜景）】
+Chinese 3D animation environment, narrow dark alley at night,
+wet cobblestone ground with standing water reflecting dim light,
+brick walls on both sides with cracks and holes where pale wooden
+hands (木手) grow outward gripping faded red silk ribbons,
+human-face wood grain texture at wrist fracture points of wooden hands,
+white bioluminescent mycelium (菌丝) growing from wall crevices
+with tiny closed eyes at tips, overall atmosphere extremely dark
+and oppressive with minimal light sources, fog hugging ground level,
+color palette: ink black #1A1A1A dominant with pale #E8E0D4 wooden
+hands and faint green #3D5E3A mycelium glow, strong depth with
+vanishing point creating tunnel compression, 16:9 aspect ratio,
+3D environment concept art, cinematic lighting
 
-spatial structure (front to back):
-- foreground: wet stone ground with shallow standing water reflecting faint light, debris and broken tiles scattered
-- midground: tall deteriorating brick walls on both sides narrowing the space, wooden doors rotted shut, pale wooden fingers (惨白木手) emerging from wall cracks
-- background: dead-end wall at the far end, barely visible in darkness, single faint cold light source from alley entrance behind camera
-
-atmosphere:
-- extremely dark, high contrast, light sources only from water reflections and distant alley mouth
-- indigo-blue (#1B3A4B) overall color cast
-- volumetric fog at ground level, thin and creeping
-- walls show age with crumbling mortar, dark moss, faded paper talismans peeling off
-- several pale paper effigies (惨白纸人) float beneath the water surface
-
-lighting:
-- no direct light source in the alley itself
-- faint reflected light from standing water
-- strong backlight from alley entrance (not visible, just glow)
-- shadows are absolute black (沉入黑处理)
-
-mood: oppressive, claustrophobic, supernatural dread,
-highly detailed 3D environment render, cinematic quality
-
-negative prompt:
-daytime, bright, warm colors, modern buildings, clean streets, people, cheerful, anime style
+Negative: bright, daytime, clean, modern, wide open space
 ```
 
-**用途**：所有暗巷镜头的环境基准 · 16:9三区/前中后景层次锚定
+```
+【Nano Banana Prompt · 场景 1 · 战后态】
+Same dark alley but AFTER BATTLE: ground transformed into dark soil
+(阴壤) with bioluminescent green fluid bubbling, walls have two
+large human-face reliefs (人脸浮雕) where bodies were sewn into
+surface with Nuo-mask expressions frozen in terror, gu-insects
+crawling in relief crevices, faded five-colored silk web remnants
+hanging between walls, overall more organic and alive than before,
+wet viscous textures everywhere, 16:9 cinematic, 3D render
+
+Negative: clean, undamaged, bright
+```
+
+### 场景 2 · 蛊母子宫（阴司道场展开后）
+
+```
+【Nano Banana Prompt · 场景 2 · 蛊母子宫】
+Chinese 3D animation environment, surreal biological horror space,
+sky torn open with pale golden amniotic fluid (#D4A017) pouring
+down like waterfalls, ground collapsed revealing massive pulsating
+organic womb structure with visible blood vessels throbbing and
+gu-chrysalises attached to surface secreting mucus, walls on both
+sides transformed into bone-gate arrays (骨门) made of ribcage
+structures with things pushing from inside causing bone deformation,
+central area floating female figure silhouette above the womb
+surrounded by golden light, four human-skin banners billowing
+with mouths opening, overall color: golden #D4A017 dominant
+from sky fluid, dark red #6B1A1A from blood vessels, bone white
+from rib gates, 16:9 aspect ratio extreme wide angle looking up,
+3D environment concept art, epic scale horror meets divine
+
+Negative: small scale, indoor, modern, peaceful, no biological elements
+```
 
 ---
 
-### SCENE-02 · 暗巷（阴司道场态 · 开眼后）
+## D · 跟随部位清单（阿青）
 
 ```
-prompt:
-Chinese 3D animation environment concept art, eastern gothic supernatural style,
-the same narrow alley but completely desaturated into an otherworldly realm (阴司道场),
-16:9 widescreen cinematic composition,
+【跟随部位清单】· 角色名：阿青
+═══════════════════════════════════════════════════════
+部位 1：轻装衣摆（靛蓝暗红下摆）
+  材质：轻薄织物·多层叠穿
+  重量感：轻（薄布·响应快·幅度大·消散慢）
+  默认运动幅度：步态轻摆·旋身时展开如墨莲花瓣
+  能量状态：
+    → 无能量：靛蓝暗红常态·无发光
+    → 低能量（蛊术激活）：衣缝处暗红蛊纹微光渗出
+    → 高能量（觉醒）：衣摆粒子化为金色蛊虫→再聚合（终极态专属）
 
-color transformation:
-- ALL colors drained away, replaced with indigo-blue (#1B3A4B) and grey-white (#E8E4D9)
-- no warm colors exist in this space whatsoever
-- bricks turned grey-white, sky turned dead indigo
-- any red elements (cloth, blood) have oxidized to black
+部位 2：双色发（中分墨黑/银白）
+  材质：轻盈发丝·自然碎发
+  重量感：轻（发丝·响应快·幅度大·消散慢）
+  默认运动幅度：随头部动作飘动·银白侧可抽出情蛊丝
+  能量状态：
+    → 无能量：黑白分明·自然光泽
+    → 低能量：银白侧发梢暗红微光（蛊纹向发丝延伸）
+    → 高能量：银白侧发丝被金色光染亮·末端可抽出情蛊丝
 
-spatial structure:
-- same alley geometry but now feels infinite, walls extending upward indefinitely
-- ground cracks with faint indigo glow between stones
-- four massive soul-guiding banners (引魂幡) floating in the background, made of black blood and cinnabar patterns, moving without wind
-- the banners are translucent, enormous (building-height), ethereal
+部位 3：红绳流苏+发间银饰
+  材质：编织红绳+苗银小件
+  重量感：轻（细绳+小饰件·响应快·幅度中·消散中）
+  默认运动幅度：随头部/风向摆动·碰撞有轻微声响
+  能量状态：
+    → 无能量：红绳暗红·银饰冷灰
+    → 低能量：红绳微微发光（蛊术通过红绳传导）
+    → 高能量：红绳被黑洞吸力牵引·银饰震颤
 
-atmosphere:
-- absolute stillness, no wind, no sound implied by the image
-- dead indigo sky with no stars, no moon
-- faint self-illumination from the ground cracks and banners
-- everything feels like it exists between life and death
+部位 4：引魂幡（四只·觉醒后专属）
+  材质：人皮质感（SSS散射·表面嘴唇开合）
+  重量感：轻（幡面·响应快·幅度极大·消散极慢）
+  默认运动幅度：随风+黑洞吸力飘动
+  能量状态：
+    → 仅高能量态存在（开相后才涌出）
+    → 幡面人皮嘴同步开合·金色光从嘴内透出
 
-lighting:
-- no natural light source
-- faint indigo ambient glow from all surfaces
-- the soul banners emit subtle dark-red and indigo light
-- extreme contrast: indigo glow against absolute black shadows
-
-mood: death realm, absolute authority, supernatural court of judgment,
-highly detailed 3D environment render, cinematic quality, desaturated color palette
-
-negative prompt:
-colorful, warm, sunlight, daytime, cheerful, living plants, normal sky, anime style, bright
+部位 5：棺形法牌（胸前红绳系挂）
+  材质：银质棺形小牌·浮雕虫蚀纹
+  重量感：中（金属小牌·响应中·幅度小·消散快）
+  默认运动幅度：随身体动作微摆·与红绳联动
+  能量状态：
+    → 无能量：银灰冷光·浮雕纹暗淡
+    → 低能量：浮雕虫蚀纹暗红发光
+    → 高能量：法牌整体金色·成为蛊术释放的辅助锚点
+═══════════════════════════════════════════════════════
+★ 铁律：STEP 5 八段式【运动物理】必须逐一覆盖所有部位
+★ 铁律：能量状态颜色必须与当前剧情阶段对齐（初始无光/觉醒金色）
 ```
-
-**用途**：镜十~十三（开眼后）的环境基准 · 阴司道场视觉锚定
 
 ---
 
-### SCENE-03 · 暗巷（战后恢复态 · 纸灰雨）
+## 参考图编号对照表（Seedance @图片N 映射）
 
-```
-prompt:
-Chinese 3D animation environment concept art, eastern gothic melancholic style,
-the same narrow alley returning to normal colors after supernatural event,
-16:9 widescreen cinematic composition,
-
-atmosphere:
-- alley has returned to its original dark night appearance
-- BUT thousands of pale white paper ash (惨白纸灰) falling like snow throughout the entire scene
-- paper ash particles of varying sizes drifting slowly downward without wind
-- faint volumetric light from above penetrating through the falling ash layer
-- ground beginning to accumulate thin layer of paper ash like first snow
-
-spatial structure:
-- foreground: large paper ash particles close to camera, slightly out of focus (bokeh)
-- midground: the alley space visible through curtain of falling ash
-- background: darkness with ash creating depth layers
-
-lighting:
-- single faint volumetric top-light (体积光) penetrating downward through ash layer
-- creates rim-lighting effect on any character standing below
-- overall color returned to cool-neutral (4500K) from extreme indigo
-- ash particles catch light creating tiny silver sparkles
-
-mood: aftermath, quiet, melancholic beauty, everything is over, 
-like snow falling on a battlefield where nothing remains,
-highly detailed 3D environment render, cinematic quality, particle effects
-
-negative prompt:
-bright daylight, warm colors, cheerful, clean, no particles, anime style, cartoon
-```
-
-**用途**：镜十四（收束）的环境基准 · 标志镜头#3 纸灰雨背景
-
----
-
-## 四、参考图编号对照表（用于 Seedance @图片N 绑定）
-
-| 编号 | 内容 | 用途 |
+| @图片N | 对应参考图 | 用途 |
 |---|---|---|
-| @图片1 | 阿青·图1正面标准+图4四分之三（合并上传） | 面部+动态锚定 |
-| @图片2 | 阿青·图2正面全身 | 体型/服饰锚定 |
-| @图片3 | 阿青·图3正侧面 | 朝向锁定 |
-| @图片4 | 阿青·图5动态气场 | 战斗状态锚定 |
-| @图片5 | SCENE-01 暗巷日常态 | 环境基准 |
-| @图片6 | SCENE-02 阴司道场态 | 开眼后环境 |
-| @图片7 | SCENE-03 战后纸灰雨 | 收束环境 |
-| @PROP-01 | 桃木杖（双态） | 武器锚定 |
-| @PROP-02 | 银簪（双态） | 武器锚定 |
-| @PROP-03 | 红布断指聘礼 | 剧情道具 |
+| @图片1 | 图 1 · 正面标准图 | 面部一致性·所有面部特写镜头 |
+| @图片2 | 图 2 · 三视图正面 | 全身比例·中景/全景镜头 |
+| @图片3 | 图 3 · 三视图侧面 | 侧面镜头·朝向锁定参考 |
+| @图片4 | 图 4 · 45°视角 | 常用分镜角度·战斗镜头 |
+| @图片5 | 图 5 · 觉醒态 | 开相后所有镜头（镜十五~二十） |
+| @PROP-01 | 枫木角杖 | 所有含杖镜头 |
+| @PROP-02 | 蛊皮 | 镜七施法 / 镜二十二重塑 |
+| @PROP-03 | 断指+银指套 | 镜六道具特写 |
+| @场景1 | 破败暗巷 | 镜一~十四（邪祟领地） |
+| @场景2 | 蛊母子宫 | 镜十六~二十（阴司道场） |
 
 ---
 
-## 五、Seedance 连贯描述中的引用规则
-
-```
-【参考图引用规则】
-═══════════════════════════════════════════════════════
-(1) 阿青出场镜头：必须上传 @图片1（面部）+ @图片2 或 @图片3（体型/朝向）
-(2) 阿青战斗镜头：额外上传 @图片4（气场状态）
-(3) 暗巷日常场景：上传 @图片5（环境基准）
-(4) 阴司道场场景：替换为 @图片6
-(5) 纸灰雨收束：替换为 @图片7
-(6) 道具特写镜头：上传对应 @PROP 编号
-(7) 每条连贯描述最多绑定 3 张参考图（Seedance 限制）
-
-推荐组合：
-  · 日常镜头：@图片1 + @图片5
-  · 战斗镜头：@图片1 + @图片4 + @图片5
-  · 开眼后镜头：@图片1 + @图片4 + @图片6
-  · 收束镜头：@图片1 + @图片7
-═══════════════════════════════════════════════════════
-```
-
----
-
-*美术参考图提示词全部产出 · 可直接投入 Nano Banana / Flux / MidJourney 生成*
+*美术参考图提示词完成 · Round 2 全部交付*
+*进入 Round 3（STEP 5 Seedance 连贯描述 22 条）*
